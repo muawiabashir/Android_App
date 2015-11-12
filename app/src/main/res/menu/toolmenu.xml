@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+
+  <item android:id="@+id/tw"
+      android:icon="@drawable/tw"
+      android:title="@string/tw"
+      app:showAsAction="always"
+      android:orderInCategory="2"
+      android:menuCategory="system"/>
+  <item android:id="@+id/mail"
+
+     android:title="@string/mail"
+     app:showAsAction="always"
+     android:orderInCategory="3"
+     android:menuCategory="system"/>
+ <item android:id="@+id/web"
+     android:icon="@drawable/web"
+     android:title="@string/web"
+     app:showAsAction="always"
+     android:orderInCategory="4"
+     android:menuCategory="system"/>
+
+</menu>

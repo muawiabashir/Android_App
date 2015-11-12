@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">Medi Life</string>
+
+    <string name="hello_world">Medi Life</string>
+    <string name="action_settings">Settings</string>
+    <string name="spinprompt">Select Place</string>
+    <string name="tw">Twiter</string>
+    <string name="mail">E-mail</string>
+    <string name="web">Web Site</string>
+<string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_close">Close Navigation Drawer</string>
+    <string name="nmae">Name</string>
+    <string name="address">Address</string>
+    <string name="password">Please Enter E-mail Address</string>
+    <string name="Email">Please Enter the Password</string>
+    <string name="serach">Search Medical Place</string>
+<string name="spinner_default">Please Select</string>
+
+    <string-array name="image_ids">
+        <item>@drawable/image0</item>
+        <item>@drawable/image1</item>
+        <item>@drawable/image2</item>
+        <item>@drawable/image3</item>
+        <item>@drawable/image4</item>
+
+    </string-array>
+    <string-array name="drawer">
+        <item>Drug Information</item>
+        <item>Health Conditions</item>
+        <item> Limits and vital signs</item>
+        <item>Medical Utilities</item>
+        <item>Hospitals</item>
+        <item>About us</item>
+        <item>Contact us</item>
+        <item>Log Out</item>
+    </string-array>
+    <string-array name="Gender">
+    <item>Male</item>
+    <item>Female</item>
+    </string-array>
+    <string-array name="directory">
+    <item>اختار .... </item>
+    <item>مستشفيات</item>
+    <item>صيدليات</item>
+    <item>عيادات اسنان</item>
+    <item>عيادات خاصة</item>
+
+</string-array>
+    <string-array name="directory1">
+    <item>اختار ....</item>
+    <item>الزيتونة</item>
+    <item>امبيريال</item>
+    <item>الاطباء</item>
+    <item>البراحة</item>
+        <item>يستبشرون</item>
+
+</string-array>
+
+<string name="search_ho">ابحث عن دواء</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="hint_Gender">Select Gender</string>
+    <string name="hint_DOB">Date Of Birth</string>
+    <string name="hint_Phone_No">Phone No</string>
+    <string name="hint_Location">Location</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+    <string name="search_hint">Search Customers</string>
+    <string name="search_label">Customers</string>
+    <string name="str_spr_countries">Select Medical Center</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="datepicker">DatePicker</string>
+    <string name="timepicker">TimePicker</string>
+    <string name="product_name">Product Name</string>
+    <string name="txt_image_slider">Image Slideshow</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="time_out">Time Out</string>
+    <string name="error_occured">Error Occurred</string>
+    <string name="job">Occupation</string>
+
+
+    <string name="transition_name_alarm">transition:ALARM</string>
+    <string-array name="Doc_spec">
+        <item>اخصائي نساء وتوليد</item>
+        <item>اخصائي باطنية</item>
+        <item>اخصائي جراحة</item>
+        <item>اخصائي اطفال</item>
+        <item>اخصائي عظام</item>
+        <item>اخصائي صدرية</item>
+        <item>اخصائي قلب</item>
+        <item>اخصائي الكلاء والمسالك البولية</item>
+
+    </string-array>
+    <string-array name="doctor_names">
+        <item>د.عمر احمد عبدالرحيم</item>
+
+        <item> د.خالد عثمان</item>
+        <item>دد. عشميق</item>
+        <item>د. هيثم </item>
+
+    </string-array>
+</resources>
