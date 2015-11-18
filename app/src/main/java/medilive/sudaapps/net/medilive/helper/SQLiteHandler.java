@@ -11,6 +11,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -47,8 +48,10 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	private static final String KEY_UID = "uid";
 	private static final String KEY_CREATED_AT = "created_at";
 
+	private Context mContext;
 	public SQLiteHandler(Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
+		mContext=context;
 	}
 
 	String CREATE_LOGIN_TABLE = "CREATE TABLE " +
@@ -121,23 +124,29 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 
 
 	public void addMedicineSchedule(MedicineSchedule medicineSchedule){
-		SQLiteDatabase db = this.getWritableDatabase();
-		ContentValues values = new ContentValues();
-		values.put(KEY_SCHEDULE_MED_COMMENT,medicineSchedule.getComment());
-		values.put(KEY_SCHEDULE_MED_COMPLETE,medicineSchedule.getIsScheduleEnd());
-		values.put(KEY_SCHEDULE_MED_DOZE,medicineSchedule.getDosage());
-		values.put(KEY_SCHEDULE_MED_END_DATE,medicineSchedule.getEndDate().getTime().toString());
-		values.put(KEY_SCHEDULE_MED_NAME,medicineSchedule.getMedName());
-		values.put(KEY_SCHEDULE_MED_START_DATE,medicineSchedule.getStartDate().getTime().toString());
-		values.put(KEY_SCHEDULE_MED_TIME,medicineSchedule.getAlarmTime().getTime().toString());
-		values.put(KEY_SCHEDULE_MED_Quantity, medicineSchedule.getQuantity());
-		values.put(KEY_SCHEDULE_MED_ALARM_HOUR,medicineSchedule.getHour());
-		values.put(KEY_SCHEDULE_MED_ALARM_MINUTE,medicineSchedule.getMinutes());
+		try {
+			SQLiteDatabase db = this.getWritableDatabase();
+			ContentValues values = new ContentValues();
+			values.put(KEY_SCHEDULE_MED_COMMENT,medicineSchedule.getComment());
+			values.put(KEY_SCHEDULE_MED_COMPLETE,medicineSchedule.getIsScheduleEnd());
+			values.put(KEY_SCHEDULE_MED_DOZE,medicineSchedule.getDosage());
+			values.put(KEY_SCHEDULE_MED_END_DATE,medicineSchedule.getEndDate().getTime().toString());
+			values.put(KEY_SCHEDULE_MED_NAME,medicineSchedule.getMedName());
+			values.put(KEY_SCHEDULE_MED_START_DATE,medicineSchedule.getStartDate().getTime().toString());
+			values.put(KEY_SCHEDULE_MED_TIME,medicineSchedule.getAlarmTime().getTime().toString());
+			values.put(KEY_SCHEDULE_MED_Quantity, medicineSchedule.getQuantity());
+			values.put(KEY_SCHEDULE_MED_ALARM_HOUR,medicineSchedule.getHour());
+			values.put(KEY_SCHEDULE_MED_ALARM_MINUTE,medicineSchedule.getMinutes());
 
-		long id = db.insert(TABLE_SCHEDULE_MED, null, values);
-		db.close(); // Closing database connection
+			long id = db.insert(TABLE_SCHEDULE_MED, null, values);
+			db.close(); // Closing database connection
+			Log.d(TAG, "New schedule inserted into sqlite: " + id);
+		}catch (NullPointerException e){
+			e.printStackTrace();
+			Toast.makeText(mContext,"Schedule not added.",Toast.LENGTH_LONG).show();
+		}
 
-		Log.d(TAG, "New schedule inserted into sqlite: " + id);
+
 	}
 
 	/**

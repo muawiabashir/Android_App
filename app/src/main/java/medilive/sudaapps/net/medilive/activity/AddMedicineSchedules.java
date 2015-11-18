@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.app.TimePickerDialog;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.CardView;
 import android.view.View;
@@ -15,7 +16,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.TimePicker;
@@ -38,18 +38,19 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
         setContentView(R.layout.activity_add_schedule);
     }
 
-    ImageView addAlarmView;
+    FloatingActionButton addAlarmView;
     LinearLayout addAlarmParentView;
-    static CardView startTimeView,endTimeView,timeView,done;
+    static CardView startTimeView,endTimeView,timeView;
     static TextView startTimeTextView,endTimeTextView,timeOfAlarmTextView;
     EditText commentView,dozeView,quantityView,nameView;
 
+    static Animation rotation;
     static MedicineSchedule medicineSchedule = new MedicineSchedule();
     @Override
     public void initViews() {
         super.initViews();
 
-        addAlarmView=(ImageView)findViewById(R.id.add_alarm);
+        addAlarmView=(FloatingActionButton)findViewById(R.id.done);
         addAlarmParentView=(LinearLayout)findViewById(R.id.add_alarm_parent);
         startTimeView=(CardView)findViewById(R.id.start_date);
         endTimeView=(CardView)findViewById(R.id.end_date);
@@ -61,10 +62,36 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
         dozeView=(EditText)findViewById(R.id.enter_medicine_dosage);
         quantityView=(EditText)findViewById(R.id.enter_medicine_quantity);
         nameView=(EditText)findViewById(R.id.enter_medicine_name);
-        done=(CardView)findViewById(R.id.done);
 
     }
 
+    @Override
+    public void initValues() {
+        super.initValues();
+        rotation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.clock_wise_animation);
+    }
+
+    @Override
+    public void initValuesInViews() {
+        super.initValuesInViews();
+        rotation.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                addAlarmView.setImageResource(R.drawable.alarm_check);
+                finish();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+    }
 
     @Override
     public void setOnViewClickListener() {
@@ -94,17 +121,23 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
                 newFragment.show(getSupportFragmentManager(), "end_date");
             }
         });
-        done.setOnClickListener(new View.OnClickListener() {
+        addAlarmView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 medicineSchedule.setMedName(nameView.getText().toString());
                 medicineSchedule.setComment(commentView.getText().toString());
-                medicineSchedule.setQuantity(Integer.parseInt(quantityView.getText().toString()));
+                int quantity=0;
+                try{
+                    quantity= Integer.parseInt(quantityView.getText().toString());
+                }catch (NumberFormatException e){
+                    quantity=0;
+                }
+                medicineSchedule.setQuantity(0);
                 medicineSchedule.setDosage(dozeView.getText().toString());
+
                 SQLiteHandler sqLiteHandler = new SQLiteHandler(getApplicationContext());
                 sqLiteHandler.addMedicineSchedule(medicineSchedule);
-//                startService(new Intent(AddMedicineSchedules.this, AlarmService.class));
-                finish();
+                v.startAnimation(rotation);
             }
         });
         addAlarmParentView.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
@@ -118,6 +151,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
         });
 
     }
+
 
     public static class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener {
 
@@ -187,6 +221,10 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
 
             Calendar c = Calendar.getInstance();
 
+            if(medicineSchedule.getStartDate()==null){
+                Toast.makeText(getActivity(),"Kindly set the Start and End date first.",Toast.LENGTH_LONG).show();
+                return;
+            }
             if(medicineSchedule.getStartDate().getTime().after(c.getTime()))
                 c=medicineSchedule.getStartDate();
             c.set(c.get(Calendar.YEAR),c.get(Calendar.MONTH),c.get(Calendar.DAY_OF_MONTH),hourOfDay,minute);
