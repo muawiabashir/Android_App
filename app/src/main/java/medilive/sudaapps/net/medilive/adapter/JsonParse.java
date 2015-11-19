@@ -27,7 +27,7 @@ public class JsonParse {
         List<SuggestGetSet> ListData = new ArrayList<SuggestGetSet>();
         try {
             String temp=sName.replace(" ", "%20");
-            URL js = new URL("http://sudaapps.net/android/medilife/food_api/medi_serach.php?name="+temp);
+            URL js = new URL("http://sudaapps.net/android/medilife/food_api/medi_serach.php?med_name="+temp);
             URLConnection jc = js.openConnection();
             BufferedReader reader = new BufferedReader(new InputStreamReader(jc.getInputStream()));
             String line = reader.readLine();
@@ -35,7 +35,7 @@ public class JsonParse {
             JSONArray jsonArray = jsonResponse.getJSONArray("results");
             for(int i = 0; i < jsonArray.length(); i++){
                 JSONObject r = jsonArray.getJSONObject(i);
-                ListData.add(new SuggestGetSet(r.getString("id"),r.getString("name")));
+                ListData.add(new SuggestGetSet(r.getString("medi_id"),r.getString("med_name")));
             }
         } catch (Exception e1) {
             // TODO Auto-generated catch block
