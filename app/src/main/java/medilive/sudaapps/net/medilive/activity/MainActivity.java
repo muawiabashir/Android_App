@@ -20,7 +20,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toolbar;
 
 import java.util.HashMap;
 
@@ -39,9 +38,9 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
     public String[] drawer_item;
     private GridViewAdapter gridAdapter;
     private ActionBarDrawerToggle drawerListener;
-    ImageView thumbview;
+
     TextView username;
-    Toolbar toolbar;
+
     private SQLiteHandler db;
     private SessionManager session;
 
@@ -128,7 +127,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 8) {
+                if (position == 0) {
 
 
                     // SqLite database handler
@@ -149,6 +148,10 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
                     logoutUser();
 
 
+                }
+                if (position == 1) {
+                    Intent intent=new Intent(MainActivity.this,Doctor_App.class);
+                    startActivity(intent);
                 }
 
                 selectedItem(position);

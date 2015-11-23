@@ -87,7 +87,7 @@
 
     <string name="transition_name_alarm">transition:ALARM</string>
     <string name="conf_exh"><![CDATA[Articles & Journal]]></string>
-    <string name="tips_tricks"><![CDATA[Tips & Tricks (First Aid)s]]></string>
+    <string name="tips_tricks"><![CDATA[Tips & Tricks (First Aids)]]></string>
     <string name="herb_rem">Herbal Remedies</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>

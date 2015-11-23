@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import medilive.sudaapps.net.medilive.R;
@@ -28,10 +28,8 @@ public class First_Layout extends Activity {
         ImageView imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setAnimation(myAnimation);
 
-        Animation myAnimation1 = AnimationUtils.loadAnimation(this, R.anim.rotate);
-        myAnimation = AnimationUtils.loadAnimation(this, R.anim.first_layoutanim);
-        imageView.setAnimation(myAnimation1);
-        myText.startAnimation(myAnimation);
+        ProgressBar progressBar =new ProgressBar(this);
+        progressBar.setVisibility(View.VISIBLE);
         Button btn_arabic = (Button) findViewById(R.id.Button03);
         btn_arabic.setOnClickListener(new View.OnClickListener() {
             @Override
