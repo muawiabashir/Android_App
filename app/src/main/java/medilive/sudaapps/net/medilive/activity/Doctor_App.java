@@ -28,11 +28,12 @@ import medilive.sudaapps.net.medilive.app.AppConfig;
  */
 public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelectedListener {
     //Declaring an Spinner
-    private Spinner spinner;
+    private Spinner spinner,spinner1;
 
     //An ArrayList for Spinner Items
     private ArrayList<String> students;
-
+    private ArrayList<String> name_arraylist;
+    private JSONArray doctors_name_arraylist;
     //JSON Array
     private JSONArray result;
 
@@ -50,7 +51,7 @@ public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelec
 
         //Initializing Spinner
         spinner = (Spinner) findViewById(R.id.spinner);
-
+        spinner1 = (Spinner) findViewById(R.id.spinner2);
         //Adding an Item Selected Listener to our Spinner
         //As we have implemented the class Spinner.OnItemSelectedListener to this class iteself we are passing this to setOnItemSelectedListener
         spinner.setOnItemSelectedListener(this);
@@ -77,8 +78,9 @@ spinner.setPrompt("اختار اخصائي");
 
                             //Storing the Array of JSON String to our JSON Array
                             result = j.getJSONArray(AppConfig.JSON_ARRAY);
-
+doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
                             //Calling method getStudents to get the students from the JSON Array
+                            getDoctorNames(doctors_name_arraylist);
                             getSpeci(result);
                         } catch (JSONException e) {
                             e.printStackTrace();
@@ -99,9 +101,9 @@ spinner.setPrompt("اختار اخصائي");
         requestQueue.add(stringRequest);
     }
 
-    private void getSpeci(JSONArray j){
+    private void getSpeci(JSONArray j) {
         //Traversing through all the items in the json array
-        for(int i=0;i<j.length();i++){
+        for (int i = 0; i < j.length(); i++) {
             try {
                 //Getting json object
                 JSONObject json = j.getJSONObject(i);
@@ -112,9 +114,24 @@ spinner.setPrompt("اختار اخصائي");
                 e.printStackTrace();
             }
         }
-
         //Setting adapter to show the items in the spinner
         spinner.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, students));
+    }
+    private void getDoctorNames(JSONArray j){
+        //Traversing through all the items in the json array
+        for(int i=0;i<j.length();i++){
+            try {
+                //Getting json object
+                JSONObject json = j.getJSONObject(i);
+
+                //Adding the name of the student to array list
+//                name_arraylist.add(json.getString(AppConfig.TAG_DOC_NAME));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+
+
     }
 
     //Method to get student name of a particular position
@@ -163,6 +180,8 @@ spinner.setPrompt("اختار اخصائي");
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //Setting the values to textviews for a selected item
 //        textViewName.setText(getName(position));
+     //   spinner1.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, name_arraylist));
+
         textViewName.setText(getCourse(position));
         textViewCourse.setText(getName(position));
         textViewSession.setText(getSession(position));
