@@ -5,19 +5,19 @@
 
 
   <item android:id="@+id/tw"
-      android:icon="@drawable/tw"
+      android:icon="@drawable/abc_btn_rating_star_on_mtrl_alpha"
       android:title="@string/tw"
       app:showAsAction="always"
       android:orderInCategory="2"
       android:menuCategory="system"/>
   <item android:id="@+id/mail"
-
+        android:icon="@drawable/abc_ic_menu_share_mtrl_alpha"
      android:title="@string/mail"
      app:showAsAction="always"
      android:orderInCategory="3"
      android:menuCategory="system"/>
  <item android:id="@+id/web"
-     android:icon="@drawable/web"
+     android:icon="@drawable/ic_account_circle_white_60pt"
      android:title="@string/web"
      app:showAsAction="always"
      android:orderInCategory="4"

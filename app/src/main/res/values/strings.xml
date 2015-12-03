@@ -3,7 +3,7 @@
 
     <string name="hello_world">Medi Life</string>
     <string name="action_settings">Settings</string>
-    <string name="spinprompt">Select Place</string>
+    <string name="spinprompt">اختار التخصص</string>
     <string name="tw">Twiter</string>
     <string name="mail">E-mail</string>
     <string name="web">Web Site</string>
@@ -86,6 +86,9 @@
 
 
     <string name="transition_name_alarm">transition:ALARM</string>
+    <string name="conf_exh"><![CDATA[Articles & Journal]]></string>
+    <string name="tips_tricks"><![CDATA[Tips & Tricks (First Aids)]]></string>
+    <string name="herb_rem">Herbal Remedies</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

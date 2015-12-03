@@ -12,6 +12,7 @@ import medilive.sudaapps.net.medilive.model.SuggestGetSet;
 /**
  * Created by muawia.ibrahim on 11/11/2015.
  */
+
 public class SuggestionAdapter extends ArrayAdapter<String> {
 
     protected static final String TAG = "SuggestionAdapter";
@@ -44,7 +45,7 @@ public class SuggestionAdapter extends ArrayAdapter<String> {
                     List<SuggestGetSet> new_suggestions =jp.getParseJsonWCF(constraint.toString());
                     suggestions.clear();
                     for (int i=0;i<new_suggestions.size();i++) {
-                        suggestions.add(new_suggestions.get(i).getName());
+                        suggestions.add(new_suggestions.get(i).getMed_name());
                     }
 
                     // Now assign the values and count to the FilterResults
@@ -57,7 +58,7 @@ public class SuggestionAdapter extends ArrayAdapter<String> {
 
             @Override
             protected void publishResults(CharSequence contraint,
-                                          Filter.FilterResults results) {
+                                          FilterResults results) {
                 if (results != null && results.count > 0) {
                     notifyDataSetChanged();
                 } else {

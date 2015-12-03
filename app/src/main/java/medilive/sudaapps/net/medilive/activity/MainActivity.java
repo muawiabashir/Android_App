@@ -23,7 +23,6 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-import medilive.sudaapps.net.medilive.Directory;
 import medilive.sudaapps.net.medilive.FragmentOne;
 import medilive.sudaapps.net.medilive.GridViewAdapter;
 import medilive.sudaapps.net.medilive.R;
@@ -39,7 +38,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
     public String[] drawer_item;
     private GridViewAdapter gridAdapter;
     private ActionBarDrawerToggle drawerListener;
-    ImageView thumbview;
+
     TextView username;
 
     private SQLiteHandler db;
@@ -59,6 +58,8 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
             transaction.replace(R.id.flContent, new FragmentOne());
             transaction.commit();
         }
+
+
         // thumbview = (ImageView) findViewById(R.id.thumbview);
         session = new SessionManager(getApplicationContext());
 
@@ -66,13 +67,13 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
             logoutUser();
         }
         TextView account_name = (TextView) findViewById(R.id.username);
-    //    HashMap<String, String> user = db.getUserDetails();
+        //    HashMap<String, String> user = db.getUserDetails();
 
-     //   String name = user.get("email");
+        //   String name = user.get("email");
         // String email = user.get("email");
 
         // Displaying the user details on the screen
-    //    account_name.setText(name);
+        //    account_name.setText(name);
         // txtEmail.setText(email);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
@@ -108,11 +109,11 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         // Displaying the user details on the screen
         //  username.setText(name);
         // txtEmail.setText(email);
-        Button btn1 =(Button)findViewById(R.id.btn01);
+        Button btn1 = (Button) findViewById(R.id.btn01);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,Directory.class);
+                Intent i = new Intent(MainActivity.this, Extras.class);
                 startActivity(i);
 
 
@@ -121,12 +122,12 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         View header = getLayoutInflater().inflate(R.layout.drawer_header, null);
         ImageView pro = (ImageView) header.findViewById(R.id.profile_image);
 
-        listView.addHeaderView(header);
+        //  listView.addHeaderView(header);
         drawerLayout.setDrawerListener(drawerListener);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 8) {
+                if (position == 0) {
 
 
                     // SqLite database handler
@@ -147,6 +148,10 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
                     logoutUser();
 
 
+                }
+                if (position == 1) {
+                    Intent intent=new Intent(MainActivity.this,Doctor_App.class);
+                    startActivity(intent);
                 }
 
                 selectedItem(position);

@@ -5,25 +5,25 @@ package medilive.sudaapps.net.medilive.model;
  */
 public class SuggestGetSet {
 
-    String id,name;
-    public SuggestGetSet(String id, String name){
-        this.setId(id);
-        this.setName(name);
-    }
-    public String getId() {
-        return id;
+    String medi_id,med_name;
+    public SuggestGetSet(String medi_id, String med_name) {
+        this.setMedi_id(medi_id);
+        this.setMed_name(med_name);
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getMedi_id() {
+        return medi_id;
     }
 
-    public String getName() {
-        return name;
+    public void setMedi_id(String medi_id) {
+        this.medi_id = medi_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getMed_name() {
+        return med_name;
     }
 
+    public void setMed_name(String med_name) {
+        this.med_name = med_name;
+    }
 }

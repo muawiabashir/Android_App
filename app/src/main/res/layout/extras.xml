@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/image_dir"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/im"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="@color/primaryColor"
+            android:text="Extras"/>
+    </RelativeLayout>
+<Button
+    android:id="@+id/conf_btn"
+    android:layout_marginTop="18dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/textback"
+    android:text="Conferences &amp; Exhibitions"
+  android:textColor="#fff"
+ android:paddingTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:textStyle="bold"
+    android:textSize="15sp"
+    android:paddingLeft="45dp"
+    android:drawableLeft="@drawable/conf"
+    android:paddingBottom="10dp"
+    android:layout_gravity="center"
+    />
+
+    <Button
+        android:id="@+id/text_btn"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textback"
+        android:text="Conferences &amp; Exhibitions"
+        android:textColor="#fff"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:paddingLeft="45dp"
+        android:drawableLeft="@drawable/art"
+        android:paddingBottom="10dp"
+        android:layout_gravity="center"
+        />
+    <Button
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textback"
+        android:text="@string/tips_tricks"
+        android:textColor="#fff"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="45dp"
+        android:drawableLeft="@drawable/tip"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textback"
+        android:text="@string/herb_rem"
+        android:textColor="#fff"
+        android:paddingTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="45dp"
+        android:drawableLeft="@drawable/herb"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>
+</ScrollView>

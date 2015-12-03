@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical">
 
     <LinearLayout
@@ -19,10 +18,10 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textSize="22sp"
             android:gravity="center"
+            android:text="@string/search_ho"
             android:textColor="@color/primaryColor"
-           android:text="@string/search_ho"/>
+            android:textSize="22sp"/>
 
         <TextView
             android:id="@+id/userName"
@@ -33,22 +32,25 @@
             android:id="@+id/auto01"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:prompt="@string/spinprompt"
-android:hint="ابحث عن دواء"
-android:gravity="center">
-        <requestFocus />
-    </AutoCompleteTextView>
+            android:background="@drawable/round"
+            android:drawableRight="@drawable/search2"
+            android:gravity="center"
+            android:hint="ابحث عن دواء"
+            android:prompt="@string/spinprompt">
 
-</LinearLayout>
+            <requestFocus/>
+        </AutoCompleteTextView>
 
-    <fragment
+    </LinearLayout>
 
-        android:id="@+id/map"
-        android:name="com.google.android.gms.maps.MapFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"/>
+    <fragment android:id="@+id/map"
+              class="com.google.android.gms.maps.SupportMapFragment"
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginBottom="10dp"
+              android:layout_marginLeft="10dp"
+              android:layout_marginRight="10dp"
+              android:layout_marginTop="10dp"/>
+
 </LinearLayout>
