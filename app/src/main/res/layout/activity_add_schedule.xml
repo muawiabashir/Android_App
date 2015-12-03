@@ -46,8 +46,8 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:imeOptions="actionDone"
                             android:hint="Enter Name of Medicine"
+                            android:imeOptions="actionDone"
                             android:singleLine="true"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"
@@ -170,30 +170,20 @@
                         android:tint="@color/white"/>
 
                     <android.support.v7.widget.CardView
+                        android:id="@+id/interval_time"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         >
 
-                        <android.support.design.widget.TextInputLayout
-                            android:id="@+id/input_layout_med_interval"
-                            android:layout_width="match_parent"
+                        <TextView
+                            android:id="@+id/interval_text"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColorHint="@color/primaryColor">
-
-                            <EditText
-                                android:id="@+id/enter_medicine_interval"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_margin="5dp"
-                                android:gravity="center"
-                                android:hint="Enter Interval of Medicine"
-                                android:inputType="number"
-                                android:singleLine="true"
-                                android:textAppearance="?android:textAppearanceMedium"
-                                android:textColor="@color/primaryColor"
-                                android:textColorHint="@color/primaryColor"/>
-                        </android.support.design.widget.TextInputLayout>
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:text="Set Interval in hours"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/primaryColor"/>
                     </android.support.v7.widget.CardView>
                 </LinearLayout>
 
@@ -293,14 +283,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right|bottom"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginBottom="10dp"
-                app:backgroundTint="@color/primaryColorDark"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
                 android:src="@drawable/add_alarm"
+                android:transitionName="@string/transition_name_alarm"
+                app:backgroundTint="@color/primaryColorDark"
                 app:borderWidth="0dp"
                 app:fabSize="normal"
-                android:transitionName="@string/transition_name_alarm"
                 >
             </android.support.design.widget.FloatingActionButton>
         </LinearLayout>

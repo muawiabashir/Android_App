@@ -25,13 +25,14 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.dialog.SelectIntervalDialog;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.model.MedicineSchedule;
 
 /**
  * Created by Adil on 01/11/2015.
  */
-public class AddMedicineSchedules extends AppCompatBaseActivity {
+public class AddMedicineSchedules extends AppCompatBaseActivity implements SelectIntervalDialog.NumberPickerCallBack {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,8 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
 
     FloatingActionButton addAlarmView;
     LinearLayout addAlarmParentView;
-    static CardView startTimeView,endTimeView,timeView;
-    static TextView startTimeTextView,endTimeTextView,timeOfAlarmTextView;
+    static CardView startTimeView,endTimeView,timeView,intervalView;
+    static TextView startTimeTextView,endTimeTextView,timeOfAlarmTextView,intervalTextView;
     EditText commentView,dozeView,quantityView,nameView;
 
     static Animation rotation;
@@ -57,8 +58,10 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
         timeView=(CardView)findViewById(R.id.time_of_alarm);
         startTimeTextView=(TextView)findViewById(R.id.start_date_text);
         endTimeTextView=(TextView)findViewById(R.id.end_date_text);
+        intervalTextView=(TextView)findViewById(R.id.interval_text);
         timeOfAlarmTextView=(TextView)findViewById(R.id.time_of_alarm_text);
         commentView=(EditText)findViewById(R.id.enter_medicine_comment);
+        intervalView=(CardView)findViewById(R.id.interval_time);
         dozeView=(EditText)findViewById(R.id.enter_medicine_dosage);
         quantityView=(EditText)findViewById(R.id.enter_medicine_quantity);
         nameView=(EditText)findViewById(R.id.enter_medicine_name);
@@ -97,6 +100,13 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
     public void setOnViewClickListener() {
         super.setOnViewClickListener();
 
+        intervalView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SelectIntervalDialog dialog=new SelectIntervalDialog(AddMedicineSchedules.this,AddMedicineSchedules.this,1,24);
+                dialog.show();
+            }
+        });
         timeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -150,6 +160,11 @@ public class AddMedicineSchedules extends AppCompatBaseActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onSelectingValue(int value) {
+        intervalTextView.setText(value+"");
     }
 
 
