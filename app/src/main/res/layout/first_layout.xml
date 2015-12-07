@@ -5,17 +5,12 @@
                 android:layout_height="match_parent"
                 android:background="@color/primaryColorDark"
                 android:orientation="vertical">
-    <include
-        android:id="@+id/field1"
-        layout="@layout/loader"
-        android:layout_centerInParent="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:id="@+id/imageView"
-        android:src="@drawable/abc_ratingbar_full_material"
+        android:src="@drawable/dokter"
         android:layout_marginTop="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
