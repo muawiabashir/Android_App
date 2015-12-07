@@ -1,5 +1,7 @@
 package medilive.sudaapps.net.medilive.activity;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -47,6 +49,8 @@ public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelec
         setContentView(R.layout.doctor_app);
         //Initializing the ArrayList
         //Initializing the ArrayList
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ff00ff")));
         students = new ArrayList<String>();
 
         //Initializing Spinner
