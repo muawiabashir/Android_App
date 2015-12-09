@@ -205,7 +205,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
                     medicineSchedule.setEndDate(calendar);
                 }
                 else if(calendar.before(Calendar.getInstance()))
-                    Toast.makeText(getActivity(),"Kindly Select Date from future.",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), R.string.select_from_futur,Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -237,7 +237,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
             Calendar c = Calendar.getInstance();
 
             if(medicineSchedule.getStartDate()==null){
-                Toast.makeText(getActivity(),"Kindly set the Start and End date first.",Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), R.string.set_start_end_first,Toast.LENGTH_LONG).show();
                 return;
             }
             if(medicineSchedule.getStartDate().getTime().after(c.getTime()))
