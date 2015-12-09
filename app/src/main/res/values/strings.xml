@@ -100,6 +100,8 @@
     <string name="med_dose">Enter Dose of Medicine</string>
     <string name="med_qty">Enter Quantity of Medicine</string>
     <string name="med_comment">Enter Comment</string>
+    <string name="select_from_futur">Kindly Select Date from future.</string>
+    <string name="set_start_end_first">Kindly set the Start and End date first.</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
