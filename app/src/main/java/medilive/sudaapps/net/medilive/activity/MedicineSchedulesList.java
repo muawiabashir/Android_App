@@ -98,7 +98,7 @@ public class MedicineSchedulesList extends AppCompatBaseActivity {
     @Override
     public void setAppBar() {
         super.setAppBar();
-        toolbar.setTitle("My Medicine Schedules");
+        toolbar.setTitle(R.string.toolbar_med_sch);
         setSupportActionBar(toolbar);
     }
 

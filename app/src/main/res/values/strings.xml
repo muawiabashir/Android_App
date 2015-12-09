@@ -102,6 +102,8 @@
     <string name="med_comment">Enter Comment</string>
     <string name="select_from_futur">Kindly Select Date from future.</string>
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
+    <string name="toolbar_med_sch">My Medicine Schedules</string>
+    <string name="take_your_medicine">Kindly take your medicine.</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

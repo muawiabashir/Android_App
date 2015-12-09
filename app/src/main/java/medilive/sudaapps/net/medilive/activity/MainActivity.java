@@ -5,8 +5,6 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -52,7 +50,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Set a toolbar to replace the action bar.
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1b1b1b")));
+        //getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#1b1b1b")));
 
         startService(new Intent(MainActivity.this, AlarmService.class));
         if (savedInstanceState == null) {
@@ -88,6 +86,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
             public void onDrawerClosed(View drawerView) {
                 //   Toast.makeText(MainActivity.this, "Drawer Closed", Toast.LENGTH_LONG).show();
                 super.onDrawerClosed(drawerView);
+
             }
 
             public void onDrawerOpened(View drawerView) {
@@ -191,6 +190,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
             return true;
 
         }
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement

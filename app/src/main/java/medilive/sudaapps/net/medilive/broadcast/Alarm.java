@@ -60,7 +60,7 @@ public class Alarm extends BroadcastReceiver {
                 new NotificationCompat.Builder(context)
                         .setSmallIcon(R.drawable.ic_medicine)
                         .setContentTitle(medicineSchedule.getMedName())
-                        .setContentText("Kindly take your medicine.")
+                        .setContentText(context.getString(R.string.take_your_medicine))
                        // .setSound(soundUri)
         .setSound(Uri.parse("android.resource://medilive.sudaapps.net.medilive/" + R.raw.alar_notify));
 

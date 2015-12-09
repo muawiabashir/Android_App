@@ -7,14 +7,14 @@
     <string name="tw">Twiter</string>
     <string name="mail">E-mail</string>
     <string name="web">Web Site</string>
-<string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
     <string name="nmae">Name</string>
     <string name="address">Address</string>
     <string name="password">Please Enter E-mail Address</string>
     <string name="Email">Please Enter the Password</string>
     <string name="serach">Search Medical Place</string>
-<string name="spinner_default">Please Select</string>
+    <string name="spinner_default">Please Select</string>
 
     <string-array name="image_ids">
 
@@ -36,28 +36,28 @@
         <item>تسجيل الخروج</item>
     </string-array>
     <string-array name="Gender">
-    <item>ذكر</item>
-    <item>انثي</item>
+        <item>ذكر</item>
+        <item>انثي</item>
     </string-array>
     <string-array name="directory">
-    <item>اختار .... </item>
-    <item>مستشفيات</item>
-    <item>صيدليات</item>
-    <item>عيادات اسنان</item>
-    <item>عيادات خاصة</item>
+        <item>اختار .... </item>
+        <item>مستشفيات</item>
+        <item>صيدليات</item>
+        <item>عيادات اسنان</item>
+        <item>عيادات خاصة</item>
 
-</string-array>
+    </string-array>
     <string-array name="directory1">
-    <item>اختار ....</item>
-    <item>الزيتونة</item>
-    <item>امبيريال</item>
-    <item>الاطباء</item>
-    <item>البراحة</item>
+        <item>اختار ....</item>
+        <item>الزيتونة</item>
+        <item>امبيريال</item>
+        <item>الاطباء</item>
+        <item>البراحة</item>
         <item>يستبشرون</item>
 
-</string-array>
+    </string-array>
 
-<string name="search_ho">ابحث عن دواء</string>
+    <string name="search_ho">ابحث عن دواء</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
@@ -103,6 +103,8 @@
     <string name="med_comment">اضافة تعليق</string>
     <string name="select_from_futur">Kindly Select Date from future.</string>
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
+    <string name="toolbar_med_sch">My Medicine Schedules</string>
+    <string name="take_your_medicine">الرجاء تناول الدواء</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
