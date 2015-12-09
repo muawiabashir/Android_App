@@ -92,6 +92,14 @@
     <string name="conf_ex">Extras</string>
     <string name="art_exh"><![CDATA[Articles & Exhibitions]]></string>
     <string name="conf_exhab"><![CDATA[Conferences & Exhibitions]]></string>
+    <string name="med_name_sch">Enter Name of Medicine</string>
+    <string name="started_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="tim_med_sch">Time for Medicine Schedule</string>
+    <string name="interval_hours">Set Interval in hours</string>
+    <string name="med_dose">Enter Dose of Medicine</string>
+    <string name="med_qty">Enter Quantity of Medicine</string>
+    <string name="med_comment">Enter Comment</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

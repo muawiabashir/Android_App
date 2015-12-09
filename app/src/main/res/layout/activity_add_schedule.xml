@@ -47,7 +47,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:hint="Enter Name of Medicine"
+                            android:hint="@string/med_name_sch"
                             android:imeOptions="actionDone"
                             android:singleLine="true"
                             android:textAppearance="?android:textAppearanceMedium"
@@ -85,7 +85,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:text="Start Date"
+                            android:text="@string/started_date"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"/>
                     </android.support.v7.widget.CardView>
@@ -113,7 +113,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:text="End Date"
+                            android:text="@string/end_date"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"/>
                     </android.support.v7.widget.CardView>
@@ -148,7 +148,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:text="Time for Medicine Schedule"
+                            android:text="@string/tim_med_sch"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"/>
                     </android.support.v7.widget.CardView>
@@ -182,7 +182,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
-                            android:text="Set Interval in hours"
+                            android:text="@string/interval_hours"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"/>
                     </android.support.v7.widget.CardView>
@@ -209,7 +209,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:hint="Enter Dose of Medicine"
+                            android:hint="@string/med_dose"
                             android:inputType="number"
                             android:singleLine="true"
                             android:textAppearance="?android:textAppearanceMedium"
@@ -239,7 +239,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:hint="Enter Quantity of Medicine"
+                            android:hint="@string/med_qty"
                             android:inputType="number"
                             android:singleLine="true"
                             android:textAppearance="?android:textAppearanceMedium"
@@ -269,7 +269,7 @@
                             android:layout_gravity="center"
                             android:layout_margin="5dp"
                             android:gravity="center"
-                            android:hint="Enter Comment"
+                            android:hint="@string/med_comment"
                             android:inputType="textLongMessage"
                             android:textAppearance="?android:textAppearanceMedium"
                             android:textColor="@color/primaryColor"
