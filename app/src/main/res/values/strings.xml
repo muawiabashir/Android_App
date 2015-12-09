@@ -89,6 +89,9 @@
     <string name="conf_exh"><![CDATA[Articles & Journal]]></string>
     <string name="tips_tricks"><![CDATA[Tips & Tricks (First Aids)]]></string>
     <string name="herb_rem">Herbal Remedies</string>
+    <string name="conf_ex">Extras</string>
+    <string name="art_exh"><![CDATA[Articles & Exhibitions]]></string>
+    <string name="conf_exhab"><![CDATA[Conferences & Exhibitions]]></string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
