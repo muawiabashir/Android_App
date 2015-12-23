@@ -68,6 +68,7 @@
         <activity android:name=".activity.Doctor_App"></activity>
         <activity android:name=".Test"></activity>
         <activity android:name=".activity.Extras"></activity>
+        <activity android:name=".activity.Limits_signs"></activity>
         <activity
             android:name=".activity.MedicineSchedulesList"
             android:theme="@style/AppTheme.Base.NoActionBar">

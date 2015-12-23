@@ -105,6 +105,10 @@
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
     <string name="toolbar_med_sch">My Medicine Schedules</string>
     <string name="take_your_medicine">الرجاء تناول الدواء</string>
+    <string name="limits_signs">Limits and Signs</string>
+    <string name="HEMATOLOGIC">HEMATOLOGIC</string>
+    <string name="MEN">MEN</string>
+    <string name="WOMEN">WOMEN</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

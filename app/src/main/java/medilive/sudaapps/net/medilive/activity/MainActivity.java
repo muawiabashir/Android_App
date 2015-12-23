@@ -115,7 +115,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Extras.class);
+                Intent i = new Intent(MainActivity.this, Limits_signs.class);
                 startActivity(i);
 
 
