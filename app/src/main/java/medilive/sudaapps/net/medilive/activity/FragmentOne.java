@@ -1,4 +1,4 @@
-package medilive.sudaapps.net.medilive;
+package medilive.sudaapps.net.medilive.activity;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -13,9 +13,9 @@ import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import medilive.sudaapps.net.medilive.activity.Directory;
-import medilive.sudaapps.net.medilive.activity.MedicineSchedulesList;
-import medilive.sudaapps.net.medilive.activity.RegisterActivity;
+import medilive.sudaapps.net.medilive.CustomGrid;
+import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.adapter.GridViewAdapter;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.helper.SessionManager;
 
@@ -33,12 +33,10 @@ public class FragmentOne extends Fragment {
     private TextView txtEmail;
     private Button btnLogout;
 
-    String[] web = {
-            "التسجبل", "بحث عن دواء", "خدمات طبية", "معلومات عن دواء", "اخري"
-
+    String[] web = {"Medical Information","Medical Services","Extra"
     };
     int[] imageId = {
-            R.drawable.image0,
+
             R.drawable.image1,
             R.drawable.image2,
             R.drawable.image3,
@@ -78,13 +76,10 @@ public class FragmentOne extends Fragment {
                     startActivity(intent);
                 }
                 if (position==2){
-                    Intent intent=new Intent(getActivity(),Directory.class);
+                    Intent intent=new Intent(getActivity(),Extras.class);
                     startActivity(intent);
                 }
-                if (position==3){
-                    Intent intent=new Intent(getActivity(),ImageSlider.class);
-                    startActivity(intent);
-                }
+
 
             }
         });

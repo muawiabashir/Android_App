@@ -23,8 +23,7 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-import medilive.sudaapps.net.medilive.FragmentOne;
-import medilive.sudaapps.net.medilive.GridViewAdapter;
+import medilive.sudaapps.net.medilive.adapter.GridViewAdapter;
 import medilive.sudaapps.net.medilive.R;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.helper.SessionManager;

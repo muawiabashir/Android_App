@@ -109,6 +109,11 @@
     <string name="HEMATOLOGIC">HEMATOLOGIC</string>
     <string name="MEN">MEN</string>
     <string name="WOMEN">WOMEN</string>
+    <string name="SPECIALIST">SPECIALIST</string>
+    <string name="doctor_name">Doctor Name</string>
+    <string name="doc_time_app"/>
+    <string name="patient_name">patient_name</string>
+    <string name="Look_medicein">look_medicien</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
