@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -40,15 +39,6 @@ public class AlarmService extends Service
 
         Log.d(Service.class.getName(),"Alarm setting loop done.");
         return START_STICKY;
-    }
-
-    @Override
-    public void onStart(Intent intent, int startId)
-    {
-
-        ArrayList<MedicineSchedule> list=new SQLiteHandler(this).getMedicineSchedules();
-        for(MedicineSchedule medicineSchedule:list)
-            alarm.SetAlarm(this,medicineSchedule);
     }
 
     @Override

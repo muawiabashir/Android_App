@@ -7,6 +7,10 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import medilive.sudaapps.net.medilive.R;
 
 
@@ -62,6 +66,24 @@ public class Utilities {
             return a;
         }
     }
+
+
+    public static Calendar stringToCalendar(String dateString){
+        Calendar calendar=Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
+        try {
+            calendar.setTime(sdf.parse(dateString));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return calendar;
+    }
+
+    public static String calendarToDayString(Calendar calendar){
+        SimpleDateFormat sdf = new SimpleDateFormat("MMM dd z yyyy");
+        return sdf.format(calendar.getTime());
+    }
+
 
 
 }

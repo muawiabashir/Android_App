@@ -142,7 +142,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
                 }catch (NumberFormatException e){
                     quantity=0;
                 }
-                medicineSchedule.setQuantity(0);
+                medicineSchedule.setQuantity(quantity);
                 medicineSchedule.setDosage(dozeView.getText().toString());
 
                 SQLiteHandler sqLiteHandler = new SQLiteHandler(getApplicationContext());
@@ -164,6 +164,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
 
     @Override
     public void onSelectingValue(int value) {
+        medicineSchedule.setInterval(value);
         intervalTextView.setText(value+"");
     }
 

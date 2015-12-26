@@ -79,6 +79,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 	private static final String KEY_SCHEDULE_MED_COMPLETE="schedule_done";
 	private static final String KEY_SCHEDULE_MED_ALARM_HOUR="schedule_day_hour";
 	private static final String KEY_SCHEDULE_MED_ALARM_MINUTE="schedule_day_minute";
+	private static final String KEY_SCHEDULE_MED_ALARM_INTERVAL="schedule_interval";
 
 
 
@@ -95,7 +96,8 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 			KEY_SCHEDULE_MED_TIME + " TEXT ," +
 			KEY_SCHEDULE_MED_COMPLETE + " INTEGER ," +
 			KEY_SCHEDULE_MED_ALARM_HOUR + " INTEGER ," +
-			KEY_SCHEDULE_MED_ALARM_MINUTE+ " INTEGER" + ")";
+			KEY_SCHEDULE_MED_ALARM_MINUTE+ " INTEGER ," +
+			KEY_SCHEDULE_MED_ALARM_INTERVAL+ " INTEGER" + ")";
 
 
 	// Creating Tables
@@ -137,6 +139,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 			values.put(KEY_SCHEDULE_MED_Quantity, medicineSchedule.getQuantity());
 			values.put(KEY_SCHEDULE_MED_ALARM_HOUR,medicineSchedule.getHour());
 			values.put(KEY_SCHEDULE_MED_ALARM_MINUTE,medicineSchedule.getMinutes());
+			values.put(KEY_SCHEDULE_MED_ALARM_INTERVAL,medicineSchedule.getInterval());
 
 			long id = db.insert(TABLE_SCHEDULE_MED, null, values);
 			db.close(); // Closing database connection
@@ -191,6 +194,7 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 			medicineSchedule.setIsScheduleEnd(cursor.getInt(8));
 			medicineSchedule.setHour(cursor.getInt(9));
 			medicineSchedule.setMinutes(cursor.getInt(10));
+			medicineSchedule.setInterval(cursor.getInt(11));
 			if(medicineSchedule.getIsScheduleEnd()==0)
 				medicineSchedules.add(medicineSchedule);
 
@@ -200,6 +204,38 @@ public class SQLiteHandler extends SQLiteOpenHelper {
 		db.close();
 		return medicineSchedules;
 	}
+
+
+	public ArrayList<MedicineSchedule> getMedicineHistorySchedules(){
+		ArrayList<MedicineSchedule> medicineSchedules = new ArrayList<>();
+		String selectQuery = "SELECT  * FROM " + TABLE_SCHEDULE_MED;
+		SQLiteDatabase db = this.getReadableDatabase();
+		Cursor cursor = db.rawQuery(selectQuery, null);
+
+		while (cursor.moveToNext()) {
+
+			MedicineSchedule medicineSchedule= new MedicineSchedule();
+			medicineSchedule.setMedName(cursor.getString(1));
+			medicineSchedule.setDosage(cursor.getString(2));
+			medicineSchedule.setQuantity(cursor.getInt(3));
+			medicineSchedule.setComment(cursor.getString(4));
+			medicineSchedule.setStartDate(converStringToCalender(cursor.getString(5)));
+			medicineSchedule.setEndDate(converStringToCalender(cursor.getString(6)));
+			medicineSchedule.setTime(converStringToCalender(cursor.getString(7)));
+			medicineSchedule.setIsScheduleEnd(cursor.getInt(8));
+			medicineSchedule.setHour(cursor.getInt(9));
+			medicineSchedule.setMinutes(cursor.getInt(10));
+			medicineSchedule.setInterval(cursor.getInt(11));
+			if(medicineSchedule.getIsScheduleEnd()==1)
+				medicineSchedules.add(medicineSchedule);
+
+		}
+
+		cursor.close();
+		db.close();
+		return medicineSchedules;
+	}
+
 
 	private Calendar converStringToCalender(String time){
 		Calendar cal=Calendar.getInstance();

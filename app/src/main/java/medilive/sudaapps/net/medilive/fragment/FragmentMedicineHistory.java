@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.adapter.FragmentMedicineHistoryAdapter;
+import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 
 /**
  * Created by Phaedra on 7/16/2015.
@@ -17,6 +19,7 @@ public class FragmentMedicineHistory extends BasicV4Fragment {
 
     View rootView;
     RecyclerView historyListView;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -27,12 +30,16 @@ public class FragmentMedicineHistory extends BasicV4Fragment {
     @Override
     public void initViews() {
         super.initViews();
-        historyListView=(RecyclerView)rootView.findViewById(R.id.recyclerView);
+        historyListView=(RecyclerView)rootView.findViewById(R.id.recyclerView1);
+
     }
     @Override
     public void initValuesInViews() {
         super.initValuesInViews();
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        SQLiteHandler sqLiteHandler=new SQLiteHandler(getActivity());
         historyListView.setLayoutManager(linearLayoutManager);
+        historyListView.setItemViewCacheSize(500);
+        historyListView.setAdapter(new FragmentMedicineHistoryAdapter(sqLiteHandler.getMedicineHistorySchedules(),getActivity()));
     }
 }

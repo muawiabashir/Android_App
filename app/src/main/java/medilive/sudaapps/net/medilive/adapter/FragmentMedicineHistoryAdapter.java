@@ -12,15 +12,14 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import medilive.sudaapps.net.medilive.R;
-import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.model.MedicineSchedule;
 
 /**
- * Created by Phaedra on 7/22/2015.
+ * Created by Adil on 26/12/2015.
  */
-public class FragmentMedicineListAdapter extends RecyclerView.Adapter<FragmentMedicineListAdapter.ViewHolder> {
+public class FragmentMedicineHistoryAdapter extends RecyclerView.Adapter<FragmentMedicineHistoryAdapter.ViewHolder> {
 
-    private static final String TAG = "FragmentMedicineListAdapter";
+    private static final String TAG = "FragmentMedicineHistoryAdapter";
     private LayoutInflater inflater;
     private static Context mContext;
     private static ArrayList<MedicineSchedule> dataList = new ArrayList<>();
@@ -28,9 +27,9 @@ public class FragmentMedicineListAdapter extends RecyclerView.Adapter<FragmentMe
 
     private static boolean fileDownloaded = false;
     public static Uri externalPath;
-    private static FragmentMedicineListAdapter instance;
+    private static FragmentMedicineHistoryAdapter instance;
 
-    public FragmentMedicineListAdapter(ArrayList<MedicineSchedule> list, Context context) {
+    public FragmentMedicineHistoryAdapter(ArrayList<MedicineSchedule> list, Context context) {
         dataList = list;
         mContext = context;
         instance = this;
@@ -84,23 +83,23 @@ public class FragmentMedicineListAdapter extends RecyclerView.Adapter<FragmentMe
             medDozeView=(TextView)v.findViewById(R.id.doze);
             medNameView=(TextView)v.findViewById(R.id.title);
             medQuantityView=(TextView)v.findViewById(R.id.quantity);
-
+            medDeleteView.setVisibility(View.GONE);
 
             setClickListeners();
         }
 
         private void setClickListeners(){
-            medDeleteView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    SQLiteHandler sqLiteHandler= new SQLiteHandler(mContext);
-                    MedicineSchedule medicineSchedule= dataList.get(getLayoutPosition());
-                    medicineSchedule.setIsScheduleEnd(1);
-                    sqLiteHandler.updateSchedules(medicineSchedule);
-                    dataList.remove(getLayoutPosition());
-                    instance.notifyItemRemove(getLayoutPosition());
-                }
-            });
+//            medDeleteView.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    SQLiteHandler sqLiteHandler= new SQLiteHandler(mContext);
+//                    MedicineSchedule medicineSchedule= dataList.get(getLayoutPosition());
+//                    medicineSchedule.setIsScheduleEnd(1);
+//                    sqLiteHandler.updateSchedules(medicineSchedule);
+//                    dataList.remove(getLayoutPosition());
+//                    instance.notifyItemRemove(getLayoutPosition());
+//                }
+//            });
         }
 
     }

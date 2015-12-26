@@ -19,12 +19,13 @@ public class MedicineSchedule implements Serializable,Comparable<MedicineSchedul
     int isScheduleEnd=0;
     int hour=0;
     int minutes=0;
+    int interval=0;
 
 
     public MedicineSchedule() {
     }
 
-    public MedicineSchedule(String medName, String dosage, int quantity, String comment, Calendar startDate, Calendar endDate, Calendar time,int isScheduleEnd) {
+    public MedicineSchedule(String medName, String dosage, int quantity, String comment, Calendar startDate, Calendar endDate, Calendar time,int isScheduleEnd,int interval) {
         this.medName = medName;
         this.dosage = dosage;
         this.quantity = quantity;
@@ -33,6 +34,7 @@ public class MedicineSchedule implements Serializable,Comparable<MedicineSchedul
         this.endDate = endDate;
         this.time = time;
         this.isScheduleEnd=isScheduleEnd;
+        this.interval=interval;
     }
 
     public int getIsScheduleEnd() {
@@ -130,6 +132,14 @@ public class MedicineSchedule implements Serializable,Comparable<MedicineSchedul
 
     public long getAlarmTimeOfDayInMillis(){
         return hour*60*60*1000+minutes*60*1000;
+    }
+
+    public int getInterval() {
+        return interval;
+    }
+
+    public void setInterval(int interval) {
+        this.interval = interval;
     }
 
     public boolean isScheduleTimePassed(){
