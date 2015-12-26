@@ -7,7 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.NotificationCompat;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
 
 import java.util.Calendar;
@@ -18,6 +18,7 @@ import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.model.MedicineSchedule;
 import medilive.sudaapps.net.medilive.services.AlarmService;
 import medilive.sudaapps.net.medilive.utils.Utilities;
+
 
 /**
  * Created by Adil on 08/10/15.
@@ -32,6 +33,7 @@ public class Alarm extends BroadcastReceiver {
     }
 
     private void updateThenNotify(MedicineSchedule medicineSchedule, Context context) {
+
         if (medicineSchedule.getInterval() == 0) {
             if (Utilities.calendarToDayString(medicineSchedule.getAlarmTime()).equals(Utilities.calendarToDayString(medicineSchedule.getEndDate()))) {
                 medicineSchedule.setIsScheduleEnd(1);
@@ -65,11 +67,10 @@ public class Alarm extends BroadcastReceiver {
         }
 
         NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(context)
+                (NotificationCompat.Builder) new NotificationCompat.Builder(context)
                         .setSmallIcon(R.drawable.ic_medicine)
                         .setContentTitle(medicineSchedule.getMedName())
                         .setContentText(contentText)
-                                // .setSound(soundUri)
                         .setSound(Uri.parse("android.resource://medilive.sudaapps.net.medilive/" + R.raw.alar_notify));
 
         Intent resultIntent = new Intent(context, MedicineSchedulesList.class);

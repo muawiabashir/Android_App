@@ -32,7 +32,7 @@ android:layout_weight="1"
     android:layout_height="wrap_content"
     android:layout_toRightOf="@+id/spinner"
     android:layout_gravity="center"
-    android:text="اختار الاخصائي"
+    android:text="@string/SPECIALIST"
     android:layout_marginRight="5dp"
     android:gravity="right"
     android:layout_weight="1"
@@ -63,7 +63,7 @@ android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/spinner2"
             android:layout_gravity="center"
-            android:text="اختار الدكتور"
+            android:text="@string/doctor_name"
             android:layout_marginRight="5dp"
             android:gravity="right"
             android:layout_weight="1"
@@ -96,19 +96,19 @@ android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#fff"
-                android:text="مواعيد العيادة"/>
+                android:text="@string/doc_time_app"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#fff"
-                android:text="العنوان"/>
+                android:text="@string/address"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="#fff"
-                android:text="اسم الطبيب" />
+                android:text="@string/doctor_name"/>
         </TableRow>
 
         <TableRow
@@ -152,14 +152,14 @@ android:layout_marginBottom="10dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/group_top"
-        android:hint="اسم المريض"
+        android:hint="@string/patient_name"
         />
     <EditText
         android:id="@+id/p_gender"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
 
-        android:hint="النوع"
+        android:hint="@string/hint_Gender"
         android:background="@drawable/group_row"
         />
 
@@ -167,7 +167,7 @@ android:layout_marginBottom="10dp"
         android:id="@+id/Phone_No"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="رقم الهاتف"
+        android:hint="@string/hint_Phone_No"
         android:background="@drawable/group_bottom"
         />
 

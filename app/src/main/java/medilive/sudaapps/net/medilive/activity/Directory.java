@@ -1,4 +1,4 @@
-package medilive.sudaapps.net.medilive;
+package medilive.sudaapps.net.medilive.activity;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
@@ -26,6 +26,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
 
+import medilive.sudaapps.net.medilive.Category;
+import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.ServiceHandler;
 import medilive.sudaapps.net.medilive.adapter.SuggestionAdapter;
 
 /**

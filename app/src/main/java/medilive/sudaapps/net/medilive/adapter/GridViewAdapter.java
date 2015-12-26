@@ -1,6 +1,4 @@
-package medilive.sudaapps.net.medilive;
-
-import java.util.ArrayList;
+package medilive.sudaapps.net.medilive.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+
+import medilive.sudaapps.net.medilive.ImageItem;
+import medilive.sudaapps.net.medilive.R;
 
 public class GridViewAdapter extends ArrayAdapter<ImageItem> {
 
