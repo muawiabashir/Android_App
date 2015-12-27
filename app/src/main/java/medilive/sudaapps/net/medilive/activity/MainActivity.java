@@ -294,6 +294,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
     private void logoutUser() {
         session.setLogin(false);
 
+        db = new SQLiteHandler(getApplicationContext());
         db.deleteUsers();
 
         // Launching the login activity
