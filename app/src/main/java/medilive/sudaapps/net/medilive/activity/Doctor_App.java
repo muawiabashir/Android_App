@@ -30,7 +30,7 @@ import medilive.sudaapps.net.medilive.app.AppConfig;
  */
 public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelectedListener {
     //Declaring an Spinner
-    private Spinner spinner,spinner1;
+    private Spinner spinner, spinner1;
 
     //An ArrayList for Spinner Items
     private ArrayList<String> students;
@@ -43,6 +43,7 @@ public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelec
     private TextView textViewName;
     private TextView textViewCourse;
     private TextView textViewSession;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +60,7 @@ public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelec
         //Adding an Item Selected Listener to our Spinner
         //As we have implemented the class Spinner.OnItemSelectedListener to this class iteself we are passing this to setOnItemSelectedListener
         spinner.setOnItemSelectedListener(this);
-spinner.setPrompt("اختار اخصائي");
+        spinner.setPrompt("اختار اخصائي");
         //Initializing TextViews
         textViewName = (TextView) findViewById(R.id.textViewName);
         textViewCourse = (TextView) findViewById(R.id.textViewCourse);
@@ -69,7 +70,7 @@ spinner.setPrompt("اختار اخصائي");
         getData();
     }
 
-    private void getData(){
+    private void getData() {
         //Creating a string request
         StringRequest stringRequest = new StringRequest(AppConfig.DATA_URL,
                 new Response.Listener<String>() {
@@ -82,7 +83,7 @@ spinner.setPrompt("اختار اخصائي");
 
                             //Storing the Array of JSON String to our JSON Array
                             result = j.getJSONArray(AppConfig.JSON_ARRAY);
-doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
+                            doctors_name_arraylist = j.getJSONArray(AppConfig.JSON_ARRAY);
                             //Calling method getStudents to get the students from the JSON Array
                             getDoctorNames(doctors_name_arraylist);
                             getSpeci(result);
@@ -121,9 +122,10 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
         //Setting adapter to show the items in the spinner
         spinner.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, students));
     }
-    private void getDoctorNames(JSONArray j){
+
+    private void getDoctorNames(JSONArray j) {
         //Traversing through all the items in the json array
-        for(int i=0;i<j.length();i++){
+        for (int i = 0; i < j.length(); i++) {
             try {
                 //Getting json object
                 JSONObject json = j.getJSONObject(i);
@@ -139,24 +141,24 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
     }
 
     //Method to get student name of a particular position
-   private String getName(int position){
-        String name="";
-      try {
+    private String getName(int position) {
+        String name = "";
+        try {
             //Getting object of given index
-          JSONObject json = result.getJSONObject(position);
+            JSONObject json = result.getJSONObject(position);
 
             //Fetching name from that object
-          name = json.getString(AppConfig.TAG_ADDRESS);
+            name = json.getString(AppConfig.TAG_ADDRESS);
         } catch (JSONException e) {
             e.printStackTrace();
-       }
+        }
         //Returning the name
-       return name;
-  }
+        return name;
+    }
 
     //Doing the same with this method as we did with getName()
-    private String getCourse(int position){
-        String course="";
+    private String getCourse(int position) {
+        String course = "";
         try {
             JSONObject json = result.getJSONObject(position);
             course = json.getString(AppConfig.TAG_DOC_NAME);
@@ -167,8 +169,8 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
     }
 
     //Doing the same with this method as we did with getName()
-    private String getSession(int position){
-        String session="";
+    private String getSession(int position) {
+        String session = "";
         try {
             JSONObject json = result.getJSONObject(position);
             session = json.getString(AppConfig.TAG_DOC_TIME);
@@ -184,7 +186,7 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //Setting the values to textviews for a selected item
 //        textViewName.setText(getName(position));
-     //   spinner1.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, name_arraylist));
+        //   spinner1.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, name_arraylist));
 
         textViewName.setText(getCourse(position));
         textViewCourse.setText(getName(position));
