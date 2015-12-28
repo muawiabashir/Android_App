@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      >
+
+    <group android:checkableBehavior="single"
+        android:menuCategory="container">
+        <item
+            android:id="@+id/nav_now_playing"
+            android:title="Now Playing" />
+        <item
+            android:id="@+id/nav_live_tv"
+            android:title="Live TV" />
+    </group>
+
+    <group android:menuCategory="secondary"
+           >
+        <item
+            android:id="@+id/report"
+            android:title="Report" />
+        <item
+            android:id="@+id/exit"
+            android:title="Exit" />
+    </group>
+
+</menu>
