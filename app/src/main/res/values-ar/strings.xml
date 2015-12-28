@@ -114,6 +114,14 @@
     <string name="doc_time_app"/>
     <string name="patient_name">patient_name</string>
     <string name="Look_medicein">look_medicien</string>
+
+    <string name="medi_information">Medical Information</string>
+    <string name="medi_services">Medical Service</string>
+    <string name="extras">Extras</string>
+    <string name="report">Report</string>
+    <string name="exit">Exit</string>
+    <string name="options">Options</string>
+
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

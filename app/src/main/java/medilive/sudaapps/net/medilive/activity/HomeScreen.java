@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.fragment.FragmentExtras;
+import medilive.sudaapps.net.medilive.fragment.FragmentMedicalInformation;
+import medilive.sudaapps.net.medilive.fragment.FragmentMedicalServices;
 
 /**
  * Created by Adil on 28/12/2015.
@@ -63,6 +66,7 @@ public class HomeScreen extends AppCompatBaseActivity {
                 });
 
         toolbar.setTitle("Medical Information");
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalInformation(),"FragmentMedicalInformation").commit();
     }
 
     private class SetAdapterTask extends AsyncTask<Void, Void, Void> {
@@ -103,13 +107,16 @@ public class HomeScreen extends AppCompatBaseActivity {
     }
     private void setFragmentMedicalInformation(MenuItem menuItem){
         changeToolbarTitle(menuItem);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalInformation(),"FragmentMedicalInformation").commit();
     }
 
     private void setFragmentMedicalService(MenuItem menuItem){
         changeToolbarTitle(menuItem);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalServices(),"FragmentMedicalServices").commit();
     }
     private void setFragmentExtras(MenuItem menuItem){
         changeToolbarTitle(menuItem);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentExtras(),"FragmentExtras").commit();
     }
 
     @Override
