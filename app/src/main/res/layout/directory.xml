@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="string/Look_medicein"
+            android:text="@string/Search_Medicin"
             android:textColor="@color/primaryColor"
             android:textSize="22sp"/>
 
@@ -35,7 +35,7 @@
             android:background="@drawable/round"
             android:drawableRight="@drawable/search2"
             android:gravity="center"
-            android:hint="@string/Look_medicein"
+            android:hint="@string/type_medicin_Name"
             android:prompt="@string/spinprompt">
 
             <requestFocus/>

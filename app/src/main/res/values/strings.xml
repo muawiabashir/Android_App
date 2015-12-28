@@ -112,7 +112,9 @@
     <string name="doctor_name">Doctor Name</string>
     <string name="doc_time_app"/>
     <string name="patient_name">patient_name</string>
-    <string name="Look_medicein">look_medicien</string>
+
+    <string name="Search_Medicin">Search Medicin</string>
+    <string name="type_medicin_Name">Type Medicine Name</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
