@@ -7,7 +7,11 @@
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryColorDark</item>
         <item name="colorAccent">@color/accentColor</item>
-
+        <item name="android:textColor">@color/text_icon</item>
+        <item name="android:icon">@color/text_icon</item>
+        <item name="android:textColorSecondary">@color/secondaryText</item>
+        <item name="android:textColorPrimary">@color/primaryText</item>
+        <item name="android:divider">@color/divider</item>
 
         <item name="android:spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner
         </item>
@@ -95,4 +99,11 @@
     <style name="DTP.Button">
         <item name="android:onClick">onClick</item>
     </style>
+
+    <style name="AppTheme.Base.NavigationDrawer" parent="AppTheme.Base">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="colorControlHighlight">@android:color/transparent</item>
+    </style>
+
 </resources>
