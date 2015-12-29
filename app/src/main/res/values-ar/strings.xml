@@ -88,7 +88,6 @@
 
     <string name="transition_name_alarm">transition:ALARM</string>
     <string name="conf_exh">مؤتمرات طبية</string>
-    <string name="tips_tricks">نصائح وحلول</string>
     <string name="herb_rem">العلاجات العشبية</string>
     <string name="conf_ex">إضافات</string>
     <string name="art_exh">مقالات وصحف</string>
@@ -105,7 +104,6 @@
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
     <string name="toolbar_med_sch">My Medicine Schedules</string>
     <string name="take_your_medicine">الرجاء تناول الدواء</string>
-    <string name="limits_signs">Limits and Signs</string>
     <string name="HEMATOLOGIC">HEMATOLOGIC</string>
     <string name="MEN">MEN</string>
     <string name="WOMEN">WOMEN</string>
@@ -115,12 +113,27 @@
     <string name="patient_name">patient_name</string>
     <string name="Look_medicein">look_medicien</string>
 
+
+    <!--//strings need to be translated-->
     <string name="medi_information">Medical Information</string>
-    <string name="medi_services">Medical Service</string>
+    <string name="medi_services">Home</string>
     <string name="extras">Extras</string>
     <string name="report">Report</string>
     <string name="exit">Exit</string>
     <string name="options">Options</string>
+    <string name="medical_directory">Medical Directory</string>
+    <string name="limits_signs">Limits &amp; Signs</string>
+    <string name="drug_information">Drug Information</string>
+    <string name="conditions">Conditions</string>
+    <string name="conference_exhibition">Conference &amp; Exhibitions</string>
+    <string name="articles_journals">Articles &amp; Journals</string>
+    <string name="tips_tricks">نصائح وحلول</string>
+    <string name="herbal_remedies">Herbal Remedies</string>
+    <string name="medi_assist">Medi Assist (Reminder)</string>
+    <string name="drug_availability">Drug Availability</string>
+    <string name="drug_delivery">Drug Delivery</string>
+    <string name="doctor_appointment">Doctors Appointment</string>
+
 
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>

@@ -65,8 +65,8 @@ public class HomeScreen extends AppCompatBaseActivity {
                     }
                 });
 
-        toolbar.setTitle("Medical Information");
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalInformation(),"FragmentMedicalInformation").commit();
+        toolbar.setTitle(getResources().getString(R.string.medi_services));
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalServices(),"FragmentMedicalServices").commit();
     }
 
     private class SetAdapterTask extends AsyncTask<Void, Void, Void> {

@@ -133,9 +133,9 @@
 
 
 
-    <!--//strings need to be translated-->
+
     <string name="medi_information">Medical Information</string>
-    <string name="medi_services">Medical Service</string>
+    <string name="medi_services">Home</string>
     <string name="extras">Extras</string>
     <string name="report">Report</string>
     <string name="exit">Exit</string>
