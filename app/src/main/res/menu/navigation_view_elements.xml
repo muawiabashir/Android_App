@@ -8,12 +8,12 @@
         android:orderInCategory="1"
         >
         <item
-            android:id="@+id/medical_information"
-            android:title="@string/medi_information"
+            android:id="@+id/medical_service"
+            android:title="@string/medi_services"
             android:checked="true"/>
         <item
-            android:id="@+id/medical_service"
-            android:title="@string/medi_services"/>
+            android:id="@+id/medical_information"
+            android:title="@string/medi_information"/>
         <item
             android:id="@+id/extras"
             android:title="@string/extras"/>
