@@ -6,6 +6,7 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import medilive.sudaapps.net.medilive.R;
@@ -13,7 +14,7 @@ import medilive.sudaapps.net.medilive.R;
 /**
  * Created by Adil on 28/12/2015.
  */
-public class FragmentExtras extends BasicV4Fragment {
+public class FragmentExtras extends BasicV4Fragment implements View.OnClickListener{
     View rootView;
 
     @Nullable
@@ -46,4 +47,46 @@ public class FragmentExtras extends BasicV4Fragment {
         box2TextView.setText(getResources().getString(R.string.articles_journals));
         box3TextView.setText(getResources().getString(R.string.tips_tricks));
         box4TextView.setText(getResources().getString(R.string.herbal_remedies));
-    }}
+    }
+
+
+    @Override
+    public void setOnViewClickListener() {
+        super.setOnViewClickListener();
+        box1View.setOnClickListener(this);
+        box2View.setOnClickListener(this);
+        box3View.setOnClickListener(this);
+        box4View.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.box1: {
+                v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
+                //open here conference exhibition screen
+                break;
+            }
+            case R.id.box2: {
+                v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
+                //open here articles journal screen
+//                startActivity(new Intent(getActivity(), MedicineSchedulesList.class));
+                break;
+            }
+            case R.id.box3: {
+                v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
+                //open here tips and  tricks screen
+//                startActivity(new Intent(getActivity(), MedicineSchedulesList.class));
+                break;
+            }
+            case R.id.box4: {
+                v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
+                //open here herbal remedies screen
+//                startActivity(new Intent(getActivity(), MedicineSchedulesList.class));
+                break;
+            }
+
+        }
+
+    }
+}

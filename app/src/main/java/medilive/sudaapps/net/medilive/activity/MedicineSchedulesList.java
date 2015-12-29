@@ -86,7 +86,7 @@ public class MedicineSchedulesList extends AppCompatBaseActivity {
     protected void onResume() {
         super.onResume();
         startService(new Intent(this, AlarmService.class));
-//        overridePendingTransition(R.anim.left_in, R.anim.right_out);
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
     }
 
     @Override

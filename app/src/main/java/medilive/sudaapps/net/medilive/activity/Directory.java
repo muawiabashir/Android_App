@@ -65,6 +65,12 @@ public class Directory extends FragmentActivity implements LocationListener {
      //   setUpMapIfNeeded();
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
+
     private void setUpMapIfNeeded() {
   //      if (!isGooglePlayServicesAvailable()) {
    //         finish();

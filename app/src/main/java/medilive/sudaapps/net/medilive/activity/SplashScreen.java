@@ -15,7 +15,7 @@ import medilive.sudaapps.net.medilive.R;
 /**
  * Created by muawia.ibrahim on 10/14/2015.
  */
-public class First_Layout extends Activity {
+public class SplashScreen extends Activity {
     Animation myAnimation;
     TextView myText;
 
@@ -34,7 +34,7 @@ public class First_Layout extends Activity {
         btn_arabic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent login = new Intent(First_Layout.this, LoginActivity.class);
+                Intent login = new Intent(SplashScreen.this, LoginActivity.class);
                 startActivity(login);
             }
         });

@@ -114,7 +114,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this, Limits_signs.class);
+                Intent i = new Intent(MainActivity.this, LimitsSigns.class);
                 startActivity(i);
 
 
@@ -151,7 +151,7 @@ public class MainActivity extends ActionBarActivity implements DrawerLayout.Draw
 
                 }
                 if (position == 1) {
-                    Intent intent=new Intent(MainActivity.this,Doctor_App.class);
+                    Intent intent=new Intent(MainActivity.this,DoctorAppointment.class);
                     startActivity(intent);
                 }
 

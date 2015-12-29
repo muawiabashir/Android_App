@@ -11,8 +11,8 @@ import android.widget.TextView;
 
 import medilive.sudaapps.net.medilive.R;
 import medilive.sudaapps.net.medilive.fragment.FragmentExtras;
+import medilive.sudaapps.net.medilive.fragment.FragmentHome;
 import medilive.sudaapps.net.medilive.fragment.FragmentMedicalInformation;
-import medilive.sudaapps.net.medilive.fragment.FragmentMedicalServices;
 
 /**
  * Created by Adil on 28/12/2015.
@@ -66,7 +66,7 @@ public class HomeScreen extends AppCompatBaseActivity {
                 });
 
         toolbar.setTitle(getResources().getString(R.string.medi_services));
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalServices(),"FragmentMedicalServices").commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentHome(),"FragmentHome").commit();
     }
 
     private class SetAdapterTask extends AsyncTask<Void, Void, Void> {
@@ -112,7 +112,7 @@ public class HomeScreen extends AppCompatBaseActivity {
 
     private void setFragmentMedicalService(MenuItem menuItem){
         changeToolbarTitle(menuItem);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentMedicalServices(),"FragmentMedicalServices").commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new FragmentHome(),"FragmentHome").commit();
     }
     private void setFragmentExtras(MenuItem menuItem){
         changeToolbarTitle(menuItem);
@@ -129,5 +129,11 @@ public class HomeScreen extends AppCompatBaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         return drawerToggle.onOptionsItemSelected(item) ||
                 super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        overridePendingTransition(R.anim.left_in, R.anim.right_out);
     }
 }

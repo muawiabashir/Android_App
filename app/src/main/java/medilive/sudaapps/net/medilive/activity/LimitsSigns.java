@@ -8,7 +8,7 @@ import medilive.sudaapps.net.medilive.R;
 /**
  * Created by muawia.ibrahim on 12/23/2015.
  */
-public class Limits_signs extends FragmentActivity {
+public class LimitsSigns extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -42,7 +42,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.First_Layout"
+            android:name=".activity.SplashScreen"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.Base.NoActionBar"
             android:windowSoftInputMode="adjustPan">
@@ -70,10 +70,10 @@
         </activity>
         <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".Dir_Medi"></activity>
-        <activity android:name=".activity.Doctor_App"></activity>
+        <activity android:name=".activity.DoctorAppointment"></activity>
         <activity android:name=".Test"></activity>
         <activity android:name=".activity.Extras"></activity>
-        <activity android:name=".activity.Limits_signs"></activity>
+        <activity android:name=".activity.LimitsSigns"></activity>
         <activity
             android:name=".activity.MedicineSchedulesList"
             android:theme="@style/AppTheme.Base.NoActionBar">

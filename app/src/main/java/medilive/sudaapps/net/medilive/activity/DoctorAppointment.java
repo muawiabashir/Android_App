@@ -1,7 +1,5 @@
 package medilive.sudaapps.net.medilive.activity;
 
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -28,7 +26,7 @@ import medilive.sudaapps.net.medilive.app.AppConfig;
 /**
  * Created by muawia.ibrahim on 10/12/2015.
  */
-public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelectedListener {
+public class DoctorAppointment extends AppCompatActivity implements Spinner.OnItemSelectedListener {
     //Declaring an Spinner
     private Spinner spinner,spinner1;
 
@@ -50,7 +48,7 @@ public class Doctor_App extends AppCompatActivity implements Spinner.OnItemSelec
         //Initializing the ArrayList
         //Initializing the ArrayList
 
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ff00ff")));
+//        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#ff00ff")));
         students = new ArrayList<String>();
 
         //Initializing Spinner
@@ -105,6 +103,12 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
         requestQueue.add(stringRequest);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
+
     private void getSpeci(JSONArray j) {
         //Traversing through all the items in the json array
         for (int i = 0; i < j.length(); i++) {
@@ -119,7 +123,7 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
             }
         }
         //Setting adapter to show the items in the spinner
-        spinner.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, students));
+        spinner.setAdapter(new ArrayAdapter<String>(DoctorAppointment.this, android.R.layout.simple_spinner_dropdown_item, students));
     }
     private void getDoctorNames(JSONArray j){
         //Traversing through all the items in the json array
@@ -184,7 +188,7 @@ doctors_name_arraylist=j.getJSONArray(AppConfig.JSON_ARRAY);
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //Setting the values to textviews for a selected item
 //        textViewName.setText(getName(position));
-     //   spinner1.setAdapter(new ArrayAdapter<String>(Doctor_App.this, android.R.layout.simple_spinner_dropdown_item, name_arraylist));
+     //   spinner1.setAdapter(new ArrayAdapter<String>(DoctorAppointment.this, android.R.layout.simple_spinner_dropdown_item, name_arraylist));
 
         textViewName.setText(getCourse(position));
         textViewCourse.setText(getName(position));
