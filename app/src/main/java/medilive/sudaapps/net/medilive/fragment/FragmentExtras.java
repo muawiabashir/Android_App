@@ -44,6 +44,7 @@ public class FragmentExtras extends BasicV4Fragment implements View.OnClickListe
     public void initValuesInViews() {
         super.initValuesInViews();
         box1TextView.setText(getResources().getString(R.string.conference_exhibition));
+
         box2TextView.setText(getResources().getString(R.string.articles_journals));
         box3TextView.setText(getResources().getString(R.string.tips_tricks));
         box4TextView.setText(getResources().getString(R.string.herbal_remedies));

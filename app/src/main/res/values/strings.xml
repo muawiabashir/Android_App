@@ -1,20 +1,19 @@
 <resources>
     <string name="app_name">Medi Life</string>
-
     <string name="hello_world">Medi Life</string>
     <string name="action_settings">Settings</string>
     <string name="spinprompt">اختار التخصص</string>
     <string name="tw">Twiter</string>
     <string name="mail">E-mail</string>
     <string name="web">Web Site</string>
-<string name="drawer_open">Open Navigation Drawer</string>
+    <string name="drawer_open">Open Navigation Drawer</string>
     <string name="drawer_close">Close Navigation Drawer</string>
     <string name="nmae">Name</string>
     <string name="address">Address</string>
     <string name="password">Please Enter E-mail Address</string>
     <string name="Email">Please Enter the Password</string>
     <string name="serach">Search Medical Place</string>
-<string name="spinner_default">Please Select</string>
+    <string name="spinner_default">Please Select</string>
 
     <string-array name="image_ids">
         <item>@drawable/image0</item>
@@ -35,28 +34,10 @@
         <item>Log Out</item>
     </string-array>
     <string-array name="Gender">
-    <item>Male</item>
-    <item>Female</item>
+        <item>Male</item>
+        <item>Female</item>
     </string-array>
-    <string-array name="directory">
-    <item>اختار .... </item>
-    <item>مستشفيات</item>
-    <item>صيدليات</item>
-    <item>عيادات اسنان</item>
-    <item>عيادات خاصة</item>
-
-</string-array>
-    <string-array name="directory1">
-    <item>اختار ....</item>
-    <item>الزيتونة</item>
-    <item>امبيريال</item>
-    <item>الاطباء</item>
-    <item>البراحة</item>
-        <item>يستبشرون</item>
-
-</string-array>
-
-<string name="search_ho">ابحث عن دواء</string>
+    <string name="search_ho">ابحث عن دواء</string>
     <string name="hint_email">Email</string>
     <string name="hint_password">Password</string>
     <string name="hint_name">Fullname</string>
@@ -83,8 +64,6 @@
     <string name="time_out">Time Out</string>
     <string name="error_occured">Error Occurred</string>
     <string name="job">Occupation</string>
-
-
     <string name="transition_name_alarm">transition:ALARM</string>
     <string name="conf_exh"><![CDATA[Articles & Journal]]></string>
     <string name="herb_rem">Herbal Remedies</string>
@@ -110,32 +89,10 @@
     <string name="doctor_name">Doctor Name</string>
     <string name="doc_time_app"/>
     <string name="patient_name">patient_name</string>
-    <string name="Look_medicein">look_medicien</string>
-    <string-array name="Doc_spec">
-        <item>اخصائي نساء وتوليد</item>
-        <item>اخصائي باطنية</item>
-        <item>اخصائي جراحة</item>
-        <item>اخصائي اطفال</item>
-        <item>اخصائي عظام</item>
-        <item>اخصائي صدرية</item>
-        <item>اخصائي قلب</item>
-        <item>اخصائي الكلاء والمسالك البولية</item>
-
-    </string-array>
-    <string-array name="doctor_names">
-        <item>د.عمر احمد عبدالرحيم</item>
-
-        <item> د.خالد عثمان</item>
-        <item>دد. عشميق</item>
-        <item>د. هيثم </item>
-
-    </string-array>
-
-
-
-
+    <string name="Search_Medicin">Search Medicin</string>
+    <string name="type_medicin_Name">Type Medicine Name</string>
     <string name="medi_information">Medical Information</string>
-    <string name="medi_services">Home</string>
+    <string name="medi_services">Medical Services</string>
     <string name="extras">Extras</string>
     <string name="report">Report</string>
     <string name="exit">Exit</string>
@@ -152,5 +109,6 @@
     <string name="drug_availability">Drug Availability</string>
     <string name="drug_delivery">Drug Delivery</string>
     <string name="doctor_appointment">Doctors Appointment</string>
+    <string name="log_out_drawer">Logout</string>
 
 </resources>

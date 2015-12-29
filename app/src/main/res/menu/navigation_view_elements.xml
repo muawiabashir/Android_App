@@ -7,22 +7,28 @@
         android:checkableBehavior="all"
         android:orderInCategory="1"
         >
+
+
         <item
             android:id="@+id/medical_service"
             android:title="@string/medi_services"
+            android:icon="@drawable/medi_serv"
             android:checked="true"/>
         <item
             android:id="@+id/medical_information"
-            android:title="@string/medi_information"/>
+            android:title="@string/medi_information"
+            android:icon="@drawable/ic_menu_medical_info"/>
         <item
             android:id="@+id/extras"
-            android:title="@string/extras"/>
+            android:title="@string/extras"
+            android:icon="@drawable/ic_menu_extra"/>
     </group>
 
     <group
         android:id="@+id/options"
         android:checkableBehavior="all"
         android:orderInCategory="2"
+        android:icon="@drawable/ic_home"
         >
 
         <item
@@ -32,6 +38,9 @@
         <item
             android:id="@+id/report"
             android:title="@string/report"/>
+        <item
+            android:id="@+id/logout"
+            android:title="@string/log_out_drawer"/>
         <item
             android:id="@+id/exit"
             android:title="@string/exit"/>

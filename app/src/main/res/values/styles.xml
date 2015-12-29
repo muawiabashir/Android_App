@@ -12,14 +12,10 @@
         <item name="android:textColorSecondary">@color/secondaryText</item>
         <item name="android:textColorPrimary">@color/primaryText</item>
         <item name="android:divider">@color/divider</item>
-
-        <item name="android:spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner
-        </item>
+        <item name="android:spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
         <item name="android:listViewStyle">@style/Widget.AppCompat.ListView</item>
         <item name="android:listViewWhiteStyle">@style/Base.Widget.AppCompat.ListView</item>
-        <item name="android:spinnerItemStyle">
-            @style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem
-        </item>
+        <item name="android:spinnerItemStyle">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>
     </style>
 
     <style name="AppTheme.Base.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
@@ -31,9 +27,7 @@
         </item>
         <item name="android:listViewStyle">@style/Widget.AppCompat.ListView</item>
         <item name="android:listViewWhiteStyle">@style/Base.Widget.AppCompat.ListView</item>
-        <item name="android:spinnerItemStyle">
-            @style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem
-        </item>
+        <item name="android:spinnerItemStyle">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>
     </style>
 
     <style name="DialogTheme" parent="Base.Theme.AppCompat.Dialog">
