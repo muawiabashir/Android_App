@@ -116,6 +116,7 @@
     <string name="Look_medicein">look_medicien</string>
     <string name="Search_Medicin">string/Look_medicein</string>
     <string name="type_medicin_Name">Type Medicine Name</string>
+    <string name="log_out_drawer">Logout</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>

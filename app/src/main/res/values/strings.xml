@@ -109,5 +109,6 @@
     <string name="drug_availability">Drug Availability</string>
     <string name="drug_delivery">Drug Delivery</string>
     <string name="doctor_appointment">Doctors Appointment</string>
+    <string name="log_out_drawer">Logout</string>
 
 </resources>

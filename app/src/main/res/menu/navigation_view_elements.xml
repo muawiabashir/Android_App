@@ -39,6 +39,9 @@
             android:id="@+id/report"
             android:title="@string/report"/>
         <item
+            android:id="@+id/logout"
+            android:title="@string/log_out_drawer"/>
+        <item
             android:id="@+id/exit"
             android:title="@string/exit"/>
     </group>
