@@ -99,10 +99,10 @@ public class Alarm extends BroadcastReceiver {
         }
     }
 
-//    public void CancelAlarm(Context context) {
-//        Intent intent = new Intent(context, Alarm.class);
-//        PendingIntent sender = PendingIntent.getBroadcast(context, 0, intent, 0);
-//        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-//        alarmManager.cancel(sender);
-//    }
+    public void CancelAlarm(Context context,MedicineSchedule schedule) {
+        Intent intent = new Intent(context, Alarm.class);
+        PendingIntent sender = PendingIntent.getBroadcast(context, (int) schedule.getAlarmTimeOfDayInMillis(), intent, 0);
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        alarmManager.cancel(sender);
+    }
 }

@@ -289,7 +289,7 @@
                 android:layout_marginTop="20dp"
                 android:src="@drawable/add_alarm"
                 android:transitionName="@string/transition_name_alarm"
-                app:backgroundTint="@color/primaryColorDark"
+                app:backgroundTint="@color/accentColor"
                 app:borderWidth="0dp"
                 app:fabSize="normal"
                 >

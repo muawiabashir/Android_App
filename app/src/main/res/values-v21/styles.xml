@@ -18,6 +18,7 @@
         <item name="android:windowContentTransitions">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@color/primaryColorDark</item>
+        <item name="android:navigationBarColor">@color/primaryColor</item>
         <item name="android:windowEnterTransition">@android:transition/slide_bottom</item>
         <item name="android:windowExitTransition">@android:transition/slide_bottom</item>
 

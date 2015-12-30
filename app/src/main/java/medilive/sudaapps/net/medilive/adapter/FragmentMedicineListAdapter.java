@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import medilive.sudaapps.net.medilive.R;
+import medilive.sudaapps.net.medilive.broadcast.Alarm;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.model.MedicineSchedule;
 
@@ -99,6 +100,7 @@ public class FragmentMedicineListAdapter extends RecyclerView.Adapter<FragmentMe
                     sqLiteHandler.updateSchedules(medicineSchedule);
                     dataList.remove(getLayoutPosition());
                     instance.notifyItemRemove(getLayoutPosition());
+                    new Alarm().CancelAlarm(mContext,medicineSchedule);
                 }
             });
         }
