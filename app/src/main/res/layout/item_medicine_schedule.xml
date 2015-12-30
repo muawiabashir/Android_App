@@ -20,14 +20,15 @@
             android:layout_height="50dp"
             android:layout_centerVertical="true"
             android:layout_margin="5dp"
-            android:tint="@color/accentColor"
+            android:tint="@color/white"
             android:src="@drawable/ic_medicine"/>
 
         <ImageView
             android:id="@+id/delete"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_alignParentRight="true"
+            android:tint="@color/accentColor"
             android:src="@drawable/delete"
             />
         <RelativeLayout
@@ -45,7 +46,7 @@
                 android:ellipsize="none"
                 android:textStyle="bold"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="@color/accentColor"/>
+                android:textColor="@color/white"/>
             <TextView
                 android:id="@+id/doze"
                 android:layout_width="wrap_content"
@@ -53,7 +54,7 @@
                 android:ellipsize="none"
                 android:layout_below="@id/title"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@color/accentColor"/>
+                android:textColor="@color/white"/>
 
 
             <TextView
@@ -64,7 +65,7 @@
                 android:layout_below="@id/title"
                 android:layout_alignParentRight="true"
                 android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="@color/accentColor"/>
+                android:textColor="@color/white"/>
 
             <TextView
                 android:id="@+id/comment"
@@ -73,7 +74,7 @@
                 android:ellipsize="none"
                 android:layout_below="@id/doze"
                 android:textAppearance="?android:textAppearanceMedium"
-                android:textColor="@color/accentColor"/>
+                android:textColor="@color/white"/>
 
         </RelativeLayout>
 
