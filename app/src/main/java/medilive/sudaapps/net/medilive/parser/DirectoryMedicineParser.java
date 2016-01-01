@@ -17,12 +17,13 @@ public class DirectoryMedicineParser {
     private final static String MEDI_NAME_KEY = "med_name";
     private final static String MEDI_ADDRESS_KEY = "address";
     private final static String MEDI_CITY_KEY = "city";
-    private final static String MEDI_LNG_KEY = "city";
-    private final static String MEDI_LAT_KEY = "city";
+    private final static String MEDI_LNG_KEY = "lat";
+    private final static String MEDI_LAT_KEY = "lng";
 
 
 
     private final static String MEDI_RESULT_KEY = "result";
+    private final static String MEDI_RESULTS_KEY = "results";
 
     public static ArrayList<DirectoryMedicine> getDirectoryMedicinesList(JSONObject object) {
         ArrayList<DirectoryMedicine> listOfMedicines = new ArrayList<>();
@@ -51,7 +52,7 @@ public class DirectoryMedicineParser {
         ArrayList<DirectoryMedicine> listOfMedicines = new ArrayList<>();
         JSONArray jsonArray = new JSONArray();
         try {
-            jsonArray = object.getJSONArray(MEDI_RESULT_KEY);
+            jsonArray = object.getJSONArray(MEDI_RESULTS_KEY);
             for (int i = 0; i < jsonArray.length(); i++) {
                 listOfMedicines.add(parseSingleWithDirections(jsonArray.getJSONObject(i)));
             }

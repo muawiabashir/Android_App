@@ -1,47 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <!--<android.support.design.widget.AppBarLayout-->
+    <!--android:id="@+id/appBarLayout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:orientation="vertical">
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
-        <TextView
-            android:id="@+id/userId"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="@string/Search_Medicin"
-            android:textColor="@color/primaryColor"
-            android:textSize="22sp"/>
-
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
-
-        <AutoCompleteTextView
-            android:id="@+id/auto01"
+        <android.support.v7.widget.CardView
+            android:id="@+id/imageView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round"
-            android:drawableRight="@drawable/search2"
-            android:gravity="center"
-            android:hint="@string/type_medicin_Name"
-            android:prompt="@string/spinprompt">
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="3dp"
+            >
 
-            <requestFocus/>
-        </AutoCompleteTextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/round"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/search2"/>
+
+                <AutoCompleteTextView
+                    android:id="@+id/directory_search_view"
+                    android:imeOptions="actionSearch"
+                    android:singleLine="true"
+                    android:inputType="text"
+                    android:autoText="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center_vertical"
+                    android:hint="@string/type_medicin_Name"
+                    android:paddingLeft="5dp"
+                    android:background="@android:color/transparent"
+                    android:prompt="@string/spinprompt"
+                    android:textColorHint="@color/primaryColorLight"
+                    android:textColor="@color/primaryColor"/>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!--</android.support.design.widget.AppBarLayout>-->
+
 
     <fragment
         android:id="@+id/map"
@@ -49,9 +78,5 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"/>
-
+        />
 </LinearLayout>
