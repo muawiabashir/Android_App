@@ -4,6 +4,7 @@ import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
@@ -120,6 +121,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
 //                double offset = i / 60d;
 //                list.add(new DirectoryMedicineClusterItem(myPosition.latitude + offset, myPosition.longitude + offset));
 //            }
+            Log.i(this.getClass().getName(),medicine.getMedicineLat()+","+medicine.getMedicineLng());
             list.add(new DirectoryMedicineClusterItem(Double.parseDouble(medicine.getMedicineLat()), Double.parseDouble(medicine.getMedicineLng())));
         }
 
