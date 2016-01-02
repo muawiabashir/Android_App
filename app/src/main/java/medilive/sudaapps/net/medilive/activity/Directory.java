@@ -1,12 +1,15 @@
 package medilive.sudaapps.net.medilive.activity;
 
+import android.content.Context;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
@@ -20,24 +23,24 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.maps.android.clustering.Cluster;
 import com.google.maps.android.clustering.ClusterManager;
 
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import medilive.sudaapps.net.medilive.R;
 import medilive.sudaapps.net.medilive.listener.ApiResponseCallback;
 import medilive.sudaapps.net.medilive.model.DirectoryMedicine;
-import medilive.sudaapps.net.medilive.model.DirectoryMedicineClusterItem;
 import medilive.sudaapps.net.medilive.parser.DirectoryMedicineParser;
 import medilive.sudaapps.net.medilive.utils.ApiCallManager;
+import medilive.sudaapps.net.medilive.utils.MapClusterItemRanderer;
 
 /**
  * Created by muawia.ibrahim on 8/25/2015.
  */
-public class Directory extends AppCompatBaseActivity implements ApiResponseCallback.ApiResponseCallbackListener, OnMapReadyCallback{
+public class Directory extends AppCompatBaseActivity implements ApiResponseCallback.ApiResponseCallbackListener, OnMapReadyCallback,ClusterManager.OnClusterClickListener<DirectoryMedicine>, ClusterManager.OnClusterInfoWindowClickListener<DirectoryMedicine>, ClusterManager.OnClusterItemClickListener<DirectoryMedicine>, ClusterManager.OnClusterItemInfoWindowClickListener<DirectoryMedicine>{
     private static final String GET_MEDICINES_LIST_URL="http://sudaapps.net/android/medilife/food_api/get_All_medicin.php";
     private static final String GET_MEDICINES_DIRECTION_LIST_URL="http://sudaapps.net/android/medilife/food_api/medi_serach.php?med_name=";
     @Override
@@ -85,6 +88,9 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
 
     private void makeDirectionsApiCall(){
         ApiCallManager.makeGetRequestForJSON(getApplicationContext(), GET_MEDICINES_DIRECTION_LIST_URL + searchView.getText(), null, this);
+        View view = this.getCurrentFocus();
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
     @Override
     protected void onResume() {
@@ -97,37 +103,21 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
         if(url.equals(GET_MEDICINES_LIST_URL)){
             updateMedicineAdapter((JSONObject)jsonObject);
         }else if(url.contains(GET_MEDICINES_DIRECTION_LIST_URL)){
-            setUpClusterer(DirectoryMedicineParser.getDirectoryMedicinesListWithDirections((JSONObject)jsonObject));
+            Log.v(this.getClass().getName(),url);
+            setUpClusterer(DirectoryMedicineParser.getDirectoryMedicinesListWithDirections((JSONObject) jsonObject));
         }
     }
 
-    ClusterManager<DirectoryMedicineClusterItem> mClusterManager;
+    ClusterManager<DirectoryMedicine> mClusterManager;
     private void setUpClusterer(ArrayList<DirectoryMedicine> listOfMedicines){
-        // Position the map.
-        mapFragment.getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(myPosition.latitude, myPosition.longitude), 2));
+        mapFragment.getMap().moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(myPosition.latitude, myPosition.longitude), 10));
+        mClusterManager = new ClusterManager<DirectoryMedicine>(this, mapFragment.getMap());
 
-        // Initialize the manager with the context and the map.
-        // (Activity extends context, so we can pass 'this' in the constructor.)
-        mClusterManager = new ClusterManager<DirectoryMedicineClusterItem>(this, mapFragment.getMap());
-
-        // Point the map's listeners at the listeners implemented by the cluster
-        // manager.
         mapFragment.getMap().setOnCameraChangeListener(mClusterManager);
         mapFragment.getMap().setOnMarkerClickListener(mClusterManager);
 
-        List<DirectoryMedicineClusterItem> list=new ArrayList<>();
-        for(DirectoryMedicine medicine:listOfMedicines){
-//            for (int i = 0; i < 10; i++) {
-//                double offset = i / 60d;
-//                list.add(new DirectoryMedicineClusterItem(myPosition.latitude + offset, myPosition.longitude + offset));
-//            }
-            Log.i(this.getClass().getName(),medicine.getMedicineLat()+","+medicine.getMedicineLng());
-            list.add(new DirectoryMedicineClusterItem(Double.parseDouble(medicine.getMedicineLat()), Double.parseDouble(medicine.getMedicineLng())));
-        }
-
-        mClusterManager.addItems(list);
-        // Add cluster items (markers) to the cluster manager.
-//         addItems(listOfMedicines,mClusterManager);
+        mClusterManager.setRenderer(new MapClusterItemRanderer(this, mapFragment.getMap(), mClusterManager));
+        mClusterManager.addItems(listOfMedicines);
     }
 
 
@@ -145,7 +135,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
     }
     @Override
     public void onErrorResponse(VolleyError error, String url) {
-
+        Toast.makeText(Directory.this, "something went wrong.", Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -158,13 +148,9 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
     private void loadMyLocation(GoogleMap googleMap) {
         LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
-        // Creating a criteria object to retrieve provider
         Criteria criteria = new Criteria();
 
-        // Getting the name of the best provider
         String provider = locationManager.getBestProvider(criteria, true);
-
-        // Getting Current Location
         Location location = locationManager.getLastKnownLocation(provider);
 
         if (location != null) {
@@ -188,7 +174,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
         // Creating a LatLng object for the current location
         LatLng latLng = new LatLng(latitude, longitude);
         myPosition = new LatLng(latitude, longitude);
-        googleMap.addMarker(new MarkerOptions().title("You are here.").position(myPosition));
+        googleMap.addMarker(new MarkerOptions().title("You are here.").position(myPosition)).showInfoWindow();
         setMyLocationCamera(location,googleMap);
     }
     private void setMyLocationCamera(Location location,GoogleMap googleMap){
@@ -196,5 +182,25 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
         CameraUpdate zoom=CameraUpdateFactory.zoomTo(15);
         googleMap.moveCamera(center);
         googleMap.animateCamera(zoom);
+    }
+
+    @Override
+    public boolean onClusterClick(Cluster<DirectoryMedicine> cluster) {
+        return false;
+    }
+
+    @Override
+    public void onClusterInfoWindowClick(Cluster<DirectoryMedicine> cluster) {
+
+    }
+
+    @Override
+    public boolean onClusterItemClick(DirectoryMedicine directoryMedicine) {
+        return false;
+    }
+
+    @Override
+    public void onClusterItemInfoWindowClick(DirectoryMedicine directoryMedicine) {
+
     }
 }

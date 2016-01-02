@@ -1,9 +1,12 @@
 package medilive.sudaapps.net.medilive.model;
 
+import com.google.android.gms.maps.model.LatLng;
+import com.google.maps.android.clustering.ClusterItem;
+
 /**
  * Created by Adil on 30/12/2015.
  */
-public class DirectoryMedicine {
+public class DirectoryMedicine implements ClusterItem {
 
     String medicineID;
     String medicineName;
@@ -77,5 +80,10 @@ public class DirectoryMedicine {
 
     public void setMedicineCity(String medicineCity) {
         this.medicineCity = medicineCity;
+    }
+
+    @Override
+    public LatLng getPosition() {
+        return new LatLng(Double.parseDouble(getMedicineLat()), Double.parseDouble(getMedicineLng()));
     }
 }
