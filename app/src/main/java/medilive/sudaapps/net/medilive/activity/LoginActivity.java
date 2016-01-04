@@ -5,7 +5,6 @@
  */
 package medilive.sudaapps.net.medilive.activity;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,7 +31,7 @@ import medilive.sudaapps.net.medilive.app.AppConfig;
 import medilive.sudaapps.net.medilive.app.AppController;
 import medilive.sudaapps.net.medilive.helper.SessionManager;
 
-public class LoginActivity extends Activity {
+public class LoginActivity extends AppCompatBaseActivity {
     // LogCat tag
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnLogin;
@@ -46,12 +45,21 @@ public class LoginActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+    }
 
+    @Override
+    public void initViews() {
+        super.initViews();
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLinkToRegister = (Button) findViewById(R.id.btnLinkToRegisterScreen);
 
+    }
+
+    @Override
+    public void initValues() {
+        super.initValues();
         // Progress dialog
         pDialog = new ProgressDialog(this);
         pDialog.setCancelable(false);
@@ -62,10 +70,16 @@ public class LoginActivity extends Activity {
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(intent);
+//            Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
+//            startActivity(intent);
             finish();
         }
+    }
+
+    @Override
+    public void setOnViewClickListener() {
+        super.setOnViewClickListener();
+
 
         // Login button Click Event
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -84,12 +98,12 @@ public class LoginActivity extends Activity {
                             "Please enter the credentials!", Toast.LENGTH_LONG)
                             .show();
 
-                        if(TextUtils.isEmpty(email))
-                        {
-                            inputEmail.setError(inputEmail.getHint()+" is Required");
-                            //inputPassword.setError(inputPassword.getHint()+" is Required");
-                     //    btnLogin.setError(btnLogin.getHint()+"is Required");
-                            return ;
+                    if(TextUtils.isEmpty(email))
+                    {
+                        inputEmail.setError(inputEmail.getHint()+" is Required");
+                        //inputPassword.setError(inputPassword.getHint()+" is Required");
+                        //    btnLogin.setError(btnLogin.getHint()+"is Required");
+                        return ;
 
                     }
                 }
@@ -107,9 +121,14 @@ public class LoginActivity extends Activity {
                 finish();
             }
         });
-
     }
 
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
     /**
      * function to verify login details in mysql db
      * */
@@ -139,9 +158,9 @@ public class LoginActivity extends Activity {
                         session.setLogin(true);
 
                         // Launch main activity
-                        Intent intent = new Intent(LoginActivity.this,
-                                MainActivity.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(LoginActivity.this,
+//                                MainActivity.class);
+//                        startActivity(intent);
                         finish();
                     } else {
                         // Error in login. Get the error message

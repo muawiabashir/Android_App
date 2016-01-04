@@ -5,7 +5,6 @@
  * */
 package medilive.sudaapps.net.medilive.activity;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,7 +35,7 @@ import medilive.sudaapps.net.medilive.app.AppController;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.helper.SessionManager;
 
-public class RegisterActivity extends Activity {
+public class RegisterActivity extends AppCompatBaseActivity {
     private static final String TAG = RegisterActivity.class.getSimpleName();
     private Button btnRegister;
     private Button btnLinkToLogin;
@@ -57,6 +56,12 @@ public class RegisterActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+    }
+
+    @Override
+    public void initViews() {
+        super.initViews();
+
         inputFullName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
@@ -66,11 +71,11 @@ public class RegisterActivity extends Activity {
         inputLocation = (EditText) findViewById(R.id.Location);
         btnRegister = (Button) findViewById(R.id.btnRegister);
         btnLinkToLogin = (Button) findViewById(R.id.btnLinkToLoginScreen);
-        inputDOB.addTextChangedListener(tw);
-        // Progress dialog
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
+    }
 
+    @Override
+    public void initValues() {
+        super.initValues();
         // Session manager
         session = new SessionManager(getApplicationContext());
 
@@ -81,10 +86,20 @@ public class RegisterActivity extends Activity {
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
             Intent intent = new Intent(RegisterActivity.this,
-                    MainActivity.class);
+                    HomeScreen.class);
             startActivity(intent);
             finish();
         }
+    }
+
+    @Override
+    public void setOnViewClickListener() {
+        super.setOnViewClickListener();
+        inputDOB.addTextChangedListener(tw);
+        // Progress dialog
+        pDialog = new ProgressDialog(this);
+        pDialog.setCancelable(false);
+
 
         // Register Button Click event
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -118,8 +133,14 @@ public class RegisterActivity extends Activity {
             }
         });
 
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        overridePendingTransition(R.anim.right_in, R.anim.left_out);
+    }
     /**
      * Function to store user in MySQL database will post params(tag, name,
      * email, password) to register url
@@ -186,7 +207,7 @@ public class RegisterActivity extends Activity {
             public void onErrorResponse(VolleyError error) {
                 Log.e(TAG, "Registration Error: " + error.getMessage());
                 Toast.makeText(getApplicationContext(),
-                        error.getMessage(), Toast.LENGTH_LONG).show();
+                        "Could not register,try again.", Toast.LENGTH_LONG).show();
                 hideDialog();
             }
         }) {

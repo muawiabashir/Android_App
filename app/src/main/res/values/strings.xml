@@ -45,7 +45,7 @@
     <string name="hint_DOB">Date Of Birth</string>
     <string name="hint_Phone_No">Phone No</string>
     <string name="hint_Location">Location</string>
-    <string name="btn_login">LOGIN</string>
+    <string name="btn_login">Login</string>
     <string name="btn_register">REGISTER</string>
     <string name="btn_link_to_register">Not a member? Sign up now.</string>
     <string name="btn_link_to_login">Already registred! Login Me.</string>
