@@ -49,6 +49,10 @@ public class FragmentMedicalInformation extends BasicV4Fragment implements View.
         box2TextView.setText(getResources().getString(R.string.limits_signs));
         box3TextView.setText(getResources().getString(R.string.drug_information));
         box4TextView.setText(getResources().getString(R.string.conditions));
+        box1View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
+        box2View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
+        box3View.setCardBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        box4View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
     }
 
     @Override

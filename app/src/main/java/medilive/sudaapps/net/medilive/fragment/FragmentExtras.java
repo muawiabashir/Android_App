@@ -44,10 +44,14 @@ public class FragmentExtras extends BasicV4Fragment implements View.OnClickListe
     public void initValuesInViews() {
         super.initValuesInViews();
         box1TextView.setText(getResources().getString(R.string.conference_exhibition));
-
         box2TextView.setText(getResources().getString(R.string.articles_journals));
         box3TextView.setText(getResources().getString(R.string.tips_tricks));
         box4TextView.setText(getResources().getString(R.string.herbal_remedies));
+
+        box1View.setCardBackgroundColor(getResources().getColor(android.R.color.darker_gray));
+        box2View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_green_dark));
+        box3View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_red_light));
+        box4View.setCardBackgroundColor(getResources().getColor(android.R.color.holo_orange_dark));
     }
 
 
