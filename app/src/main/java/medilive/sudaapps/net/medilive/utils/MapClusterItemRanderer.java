@@ -29,7 +29,7 @@ public class MapClusterItemRanderer extends DefaultClusterRenderer<DirectoryMedi
     @Override
     protected void onBeforeClusterItemRendered(DirectoryMedicine item, MarkerOptions markerOptions) {
         super.onBeforeClusterItemRendered(item, markerOptions);
-        markerOptions.title(item.getMedicineName()).snippet(item.getMedicineAddress()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
+        markerOptions.title(item.getMedicineAddress()).snippet(item.getMedicinePharmacyContact()).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
     }
 
     @Override

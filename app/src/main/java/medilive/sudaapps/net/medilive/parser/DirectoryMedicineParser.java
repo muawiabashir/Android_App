@@ -19,6 +19,7 @@ public class DirectoryMedicineParser {
     private final static String MEDI_CITY_KEY = "city";
     private final static String MEDI_LNG_KEY = "lat";
     private final static String MEDI_LAT_KEY = "lng";
+    private final static String MEDI_PHONE_KEY = "phone_no";
 
 
 
@@ -68,6 +69,7 @@ public class DirectoryMedicineParser {
         medicine.setMedicineName(jsonObject.getString(MEDI_NAME_KEY));
         medicine.setMedicineLat(jsonObject.getString(MEDI_LAT_KEY));
         medicine.setMedicineLng(jsonObject.getString(MEDI_LNG_KEY));
+        medicine.setMedicinePharmacyContact(jsonObject.getString(MEDI_PHONE_KEY));
         return medicine;
     }
 

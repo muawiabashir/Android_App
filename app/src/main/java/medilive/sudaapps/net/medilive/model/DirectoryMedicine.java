@@ -14,24 +14,18 @@ public class DirectoryMedicine implements ClusterItem {
     String medicineCity;
     String medicineLng;
     String medicineLat;
+    String medicinePharmacyContact;
+
 
     public DirectoryMedicine() {
     }
 
-    public DirectoryMedicine(String medicineID, String medicineName, String medicineAddress, String medicineCity) {
-        this.medicineID = medicineID;
-        this.medicineName = medicineName;
-        this.medicineAddress = medicineAddress;
-        this.medicineCity = medicineCity;
+    public String getMedicinePharmacyContact() {
+        return medicinePharmacyContact;
     }
 
-    public DirectoryMedicine(String medicineID, String medicineName, String medicineAddress, String medicineCity, String medicineLng, String medicineLat) {
-        this.medicineID = medicineID;
-        this.medicineName = medicineName;
-        this.medicineAddress = medicineAddress;
-        this.medicineCity = medicineCity;
-        this.medicineLng = medicineLng;
-        this.medicineLat = medicineLat;
+    public void setMedicinePharmacyContact(String medicinePharmacyContact) {
+        this.medicinePharmacyContact = medicinePharmacyContact;
     }
 
     public String getMedicineLng() {
