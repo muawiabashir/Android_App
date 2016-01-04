@@ -155,7 +155,8 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
             @Override
             public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
 
-                circularRevealOnStart(v);
+                if(android.os.Build.VERSION.SDK_INT>=21)
+                    circularRevealOnStart(v);
                 v.removeOnLayoutChangeListener(this);
             }
         });
