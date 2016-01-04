@@ -41,8 +41,6 @@ public class DirectoryMedicineParser {
 
     public static DirectoryMedicine parseSingle(JSONObject jsonObject) throws JSONException {
         DirectoryMedicine medicine = new DirectoryMedicine();
-        medicine.setMedicineAddress(jsonObject.getString(MEDI_ADDRESS_KEY));
-        medicine.setMedicineCity(jsonObject.getString(MEDI_CITY_KEY));
         medicine.setMedicineID(jsonObject.getString(MEDI_ID_KEY));
         medicine.setMedicineName(jsonObject.getString(MEDI_NAME_KEY));
         return medicine;
