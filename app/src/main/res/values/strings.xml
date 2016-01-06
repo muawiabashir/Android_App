@@ -110,5 +110,6 @@
     <string name="drug_delivery">Drug Delivery</string>
     <string name="doctor_appointment">Doctors Appointment</string>
     <string name="log_out_drawer">Logout</string>
+    <string name="you_r_here">You are here.</string>
 
 </resources>

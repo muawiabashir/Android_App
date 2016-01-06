@@ -78,7 +78,7 @@ public class FragmentHome extends BasicV4Fragment implements View.OnClickListene
             case R.id.box3: {
                 v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
                 //                open here drug delivery screen
-//                startActivity(new Intent(getActivity(), MedicineSchedulesList.class));
+              // startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
             }
             case R.id.box4: {
