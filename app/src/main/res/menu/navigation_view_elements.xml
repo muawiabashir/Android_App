@@ -28,6 +28,7 @@
         android:id="@+id/options"
         android:checkableBehavior="all"
         android:orderInCategory="2"
+        
         android:icon="@drawable/ic_home"
         >
 

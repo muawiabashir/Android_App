@@ -98,7 +98,7 @@ public class Expandable_List_Adapter_LimitsSigns extends BaseExpandableListAdapt
         test.setText(expandable_items_limits_signs.getTest().trim());
         men.setText(expandable_items_limits_signs.getMen().trim());
         women.setText(expandable_items_limits_signs.getWomen().trim());
-      //  convertView.setBackgroundColor(childPosition % 2 == 0 ? Color.GRAY : Color.WHITE);
+     //  convertView.setBackgroundColor(childPosition % 2 == 0 ? Color.GRAY : Color.WHITE);
         return convertView;
     }
 
