@@ -16,7 +16,9 @@
             android:layout_marginLeft="5dp"
                         android:layout_height="wrap_content"
             android:background="@drawable/round"
+
             android:layout_alignParentTop="true" />
+    <requestFocus />
         <ExpandableListView
             android:id="@+id/exp_list"
             android:layout_height="match_parent"
