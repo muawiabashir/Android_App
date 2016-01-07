@@ -24,10 +24,9 @@
             android:layout_marginLeft="3dp"
             android:layout_marginRight="3dp"
             android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-            android:divider="@color/primaryColor"
+
             android:dividerHeight="2dp"
-            android:childDivider="@color/accentColor"
-            android:transcriptMode="alwaysScroll"
+
 
             ></ExpandableListView>
 

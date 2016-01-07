@@ -65,21 +65,21 @@ public class ImageSlider extends ActionBarActivity implements BaseSliderView.OnS
         url_maps.put("Game of Thrones", "http://images.boomsbeat.com/data/images/full/19640/game-of-thrones-season-4-jpg.jpg");
 
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("شراب حبة صباح ", R.drawable.s);
-        file_maps.put("كبسولات", R.drawable.s1);
-        file_maps.put("دريب", R.drawable.s2);
-        file_maps.put("رقاد", R.drawable.s3);
-        file_maps.put("Game of Thrones", R.drawable.s4);
-        file_maps.put("شراب حبة صباح ", R.drawable.s);
-        file_maps.put("كبسولات", R.drawable.s1);
-        file_maps.put("دريب", R.drawable.s2);
-        file_maps.put("رقاد", R.drawable.s3);
-        file_maps.put("Game of Thrones", R.drawable.s4);
-        file_maps.put("شراب حبة صباح ", R.drawable.s);
-        file_maps.put("كبسولات", R.drawable.s1);
-        file_maps.put("دريب", R.drawable.s2);
-        file_maps.put("رقاد", R.drawable.s3);
-        file_maps.put("Game of Thrones", R.drawable.s4);
+     //   file_maps.put("شراب حبة صباح ", R.drawable.s);
+    //    file_maps.put("كبسولات", R.drawable.s1);
+    //    file_maps.put("دريب", R.drawable.s2);
+    //    file_maps.put("رقاد", R.drawable.s3);
+    //    file_maps.put("Game of Thrones", R.drawable.s4);
+    //    file_maps.put("شراب حبة صباح ", R.drawable.s);
+    //    file_maps.put("كبسولات", R.drawable.s1);
+    //    file_maps.put("دريب", R.drawable.s2);
+    //    file_maps.put("رقاد", R.drawable.s3);
+    //    file_maps.put("Game of Thrones", R.drawable.s4);
+    //    file_maps.put("شراب حبة صباح ", R.drawable.s);
+    //    file_maps.put("كبسولات", R.drawable.s1);
+    //    file_maps.put("دريب", R.drawable.s2);
+    //    file_maps.put("رقاد", R.drawable.s3);
+     //   file_maps.put("Game of Thrones", R.drawable.s4);
     /*    for (String name : url_maps.keySet()) {
             TextSliderView textSliderView = new TextSliderView(this);
             // initialize a SliderLayout

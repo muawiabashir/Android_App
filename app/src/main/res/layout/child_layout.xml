@@ -18,48 +18,43 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:text="Test :"
-            />
+
     <TextView android:id="@+id/test"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-
-
-              android:paddingRight="10dp"
+android:layout_marginLeft="5dp"
+android:textStyle="bold"
               android:text="Test"
               android:textAppearance="?android:attr/textAppearanceMedium"/>
     </TableRow>
     <TableRow>
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:text="MEN :"
+        android:src="@drawable/male"
         />
     <TextView android:id="@+id/men"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_alignParentTop="true"
-              android:layout_toRightOf="@+id/test"
+              android:layout_toRightOf="@+id/male"
               android:text="@string/MEN"
               android:textAppearance="?android:attr/textAppearanceMedium"/>
 </TableRow>
     <TableRow>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
-        android:text="Women :"
-        />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/female"
+            />
     <TextView android:id="@+id/women"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:layout_alignParentRight="true"
               android:layout_alignParentTop="true"
+              android:layout_toRightOf="@+id/female"
               android:paddingRight="5dp"
               android:text="WOMEN"
               android:textAppearance="?android:attr/textAppearanceMedium"/>
