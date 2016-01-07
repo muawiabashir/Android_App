@@ -31,7 +31,7 @@ android:textStyle="bold"
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="5dp"
+
         android:src="@drawable/male"
         />
     <TextView android:id="@+id/men"
@@ -46,7 +46,7 @@ android:textStyle="bold"
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+
             android:src="@drawable/female"
             />
     <TextView android:id="@+id/women"
@@ -55,7 +55,7 @@ android:textStyle="bold"
               android:layout_alignParentRight="true"
               android:layout_alignParentTop="true"
               android:layout_toRightOf="@+id/female"
-              android:paddingRight="5dp"
+
               android:text="WOMEN"
               android:textAppearance="?android:attr/textAppearanceMedium"/>
     </TableRow>
