@@ -50,7 +50,7 @@ public class LimitsSigns extends FragmentActivity implements SearchView.OnQueryT
         ArrayList<Expandable_items_Limits_Signs> limits_signs_List = new ArrayList<Expandable_items_Limits_Signs>();
 
 
-        Expandable_items_Limits_Signs limits_signs = new Expandable_items_Limits_Signs("Red blood cells (RBC)", "4.6–6.2 million/mm3 4.2–5.4", "Red blood cells (RBC) 4.6–6.2 million/mm3 4.2–5.4 million/mm3");
+        Expandable_items_Limits_Signs limits_signs = new Expandable_items_Limits_Signs("Red blood cells (RBC)", "4.6–6.2 million/mm3 4.2–5.4", "4.6–6.2 million/mm3 4.2–5.4 million/mm3");
         limits_signs_List.add(limits_signs);
         limits_signs = new Expandable_items_Limits_Signs("Hemoglobin", "13.5–18 g/dL", "12–16 g/dL");
         limits_signs_List.add(limits_signs);
