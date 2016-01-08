@@ -14,7 +14,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.Request.Method;
@@ -32,6 +31,7 @@ import java.util.Map;
 import medilive.sudaapps.net.medilive.R;
 import medilive.sudaapps.net.medilive.app.AppConfig;
 import medilive.sudaapps.net.medilive.app.AppController;
+import medilive.sudaapps.net.medilive.dialog.SelectGenderDialog;
 import medilive.sudaapps.net.medilive.helper.SQLiteHandler;
 import medilive.sudaapps.net.medilive.helper.SessionManager;
 
@@ -42,7 +42,7 @@ public class RegisterActivity extends AppCompatBaseActivity {
     private EditText inputFullName;
     private EditText inputEmail;
     private EditText inputPassword;
-    private Spinner inputGender;
+    private Button inputGender;
     private EditText inputDOB;
     private EditText inputPhone_no;
     private EditText inputLocation;
@@ -64,7 +64,7 @@ public class RegisterActivity extends AppCompatBaseActivity {
         inputFullName = (EditText) findViewById(R.id.name);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
-        inputGender = (Spinner) findViewById(R.id.Gender);
+        inputGender = (Button) findViewById(R.id.Gender);
         inputDOB = (EditText) findViewById(R.id.DOB);
         inputPhone_no = (EditText) findViewById(R.id.Phone_No);
         inputLocation = (EditText) findViewById(R.id.Location);
@@ -100,13 +100,27 @@ public class RegisterActivity extends AppCompatBaseActivity {
         pDialog.setCancelable(false);
 
 
+        inputGender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SelectGenderDialog selectGenderDialog = new SelectGenderDialog(RegisterActivity.this);
+                selectGenderDialog.setOnGenderSelectCallListener(new SelectGenderDialog.GenderSelectListener() {
+                    @Override
+                    public void onSelectingGender(String value) {
+                        inputGender.setText(value);
+                        inputGender.setTextColor(getResources().getColor(R.color.primaryText));
+                    }
+                });
+                selectGenderDialog.show();
+            }
+        });
         // Register Button Click event
         btnRegister.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 String name = inputFullName.getText().toString();
                 String email = inputEmail.getText().toString();
                 String password = inputPassword.getText().toString();
-                String gender = inputGender.getSelectedItem().toString();
+                String gender = inputGender.getText().toString();
                 String dob = inputDOB.getText().toString();
                 String phone_no = inputPhone_no.getText().toString();
                 String location = inputLocation.getText().toString();

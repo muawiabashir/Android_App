@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="@string/select_interval_in_hours"
+                android:text="@string/hint_Gender"
                 android:textAppearance="?android:textAppearanceLarge"
                 />
 
@@ -43,7 +43,7 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerView"
                 android:layout_width="100dp"
-                android:layout_height="300dp"
+                android:layout_height="200dp"
                 android:paddingTop="10dp"
                 android:layout_marginLeft="5dp"
                 android:clipToPadding="false"

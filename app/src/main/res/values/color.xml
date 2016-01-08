@@ -36,6 +36,7 @@
     <color name="view_divider_color">#BABABA</color>
     <color name="view_divider_color_2">#DADADA</color>
 
-    <color name="highlighter_transparent">#33DADADA</color>
+    <color name="transparent">#00000000</color>
+    <color name="highlighter_transparent">#33FF4081</color>
 
 </resources>

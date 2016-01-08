@@ -27,10 +27,10 @@
         <item name="android:textColorSecondary">@color/secondaryText</item>
         <item name="android:textColorPrimary">@color/primaryText</item>
         <item name="android:divider">@color/divider</item>
-        <item name="android:spinnerDropDownItemStyle">@style/spinner_style</item>
-        <item name="android:listViewStyle">@style/Widget.AppCompat.ListView</item>
-        <item name="android:listViewWhiteStyle">@style/Base.Widget.AppCompat.ListView</item>
-        <item name="android:dialogTheme">@style/Theme.AppCompat.Dialog</item>
+        <!--<item name="android:spinnerDropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>-->
+        <!--<item name="android:spinnerItemStyle">@style/TextAppearance.AppCompat.Widget.TextView.SpinnerItem</item>-->
+        <!--<item name="android:listViewStyle">@style/Widget.AppCompat.ListView</item>-->
+        <!--<item name="android:listViewWhiteStyle">@style/Base.Widget.AppCompat.ListView</item>-->
         <!--<item name="android:spinnerStyle">@style/spinner_style</item>-->
     </style>
 
@@ -39,70 +39,70 @@
         <item name="colorPrimaryDark">@color/primaryColorDark</item>
         <item name="colorAccent">@color/accentColor</item>
     </style>
-  <style name="spinner_style" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
-      <item name="android:background">@drawable/spinner_bg</item>
-      <item name="colorPrimary">@color/primaryColor</item>
-      <item name="colorPrimaryDark">@color/primaryColorDark</item>
-      <item name="colorAccent">@color/accentColor</item>
-      <item name="android:titleTextColor">@color/accentColor</item>
-      <item name="android:textColorSecondary">@color/secondaryText</item>
-      <item name="android:textColorPrimary">@color/primaryText</item>
-      <item name="android:layout_marginLeft">10dp</item>
-    <item name="android:layout_marginRight">10dp</item>
-    <item name="android:layout_marginBottom">10dp</item>
-    <item name="android:paddingLeft">8dp</item>
-    <item name="android:paddingTop">5dp</item>
-    <item name="android:paddingBottom">5dp</item>
-    </style>
-    <style name="map_style">
-        <item name="android:background">@drawable/map_bg</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:layout_marginBottom">10dp</item>
-        <item name="android:paddingLeft">8dp</item>
-        <item name="android:paddingTop">5dp</item>
-        <item name="android:paddingBottom">5dp</item>
-    </style>
-    <color name="transparent">#00000000</color>
+  <!--<style name="spinner_style" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">-->
+      <!--<item name="android:background">@drawable/spinner_bg</item>-->
+      <!--<item name="colorPrimary">@color/primaryColor</item>-->
+      <!--<item name="colorPrimaryDark">@color/primaryColorDark</item>-->
+      <!--<item name="colorAccent">@color/accentColor</item>-->
+      <!--<item name="android:titleTextColor">@color/accentColor</item>-->
+      <!--<item name="android:textColorSecondary">@color/secondaryText</item>-->
+      <!--<item name="android:textColorPrimary">@color/primaryText</item>-->
+      <!--<item name="android:layout_marginLeft">10dp</item>-->
+    <!--<item name="android:layout_marginRight">10dp</item>-->
+    <!--<item name="android:layout_marginBottom">10dp</item>-->
+    <!--<item name="android:paddingLeft">8dp</item>-->
+    <!--<item name="android:paddingTop">5dp</item>-->
+    <!--<item name="android:paddingBottom">5dp</item>-->
+    <!--</style>-->
+    <!--<style name="map_style">-->
+        <!--<item name="android:background">@drawable/map_bg</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <!--<item name="android:layout_marginRight">10dp</item>-->
+        <!--<item name="android:layout_marginBottom">10dp</item>-->
+        <!--<item name="android:paddingLeft">8dp</item>-->
+        <!--<item name="android:paddingTop">5dp</item>-->
+        <!--<item name="android:paddingBottom">5dp</item>-->
+    <!--</style>-->
+    <!--<color name="transparent">#00000000</color>-->
 
-    <style name="btnStyleOrange" parent="@android:style/Widget.Button">
-        <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#FFFFFF</item>
-        <item name="android:gravity">center</item>
-        <item name="android:shadowColor">#000000</item>
-        <item name="android:shadowDx">1</item>
-        <item name="android:shadowDy">1</item>
-        <item name="android:shadowRadius">0.6</item>
-        <item name="android:background">@drawable/custom_btn_orange</item>
-        <item name="android:padding">10dip</item>
-    </style>
+    <!--<style name="btnStyleOrange" parent="@android:style/Widget.Button">-->
+        <!--<item name="android:textSize">15sp</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:textColor">#FFFFFF</item>-->
+        <!--<item name="android:gravity">center</item>-->
+        <!--<item name="android:shadowColor">#000000</item>-->
+        <!--<item name="android:shadowDx">1</item>-->
+        <!--<item name="android:shadowDy">1</item>-->
+        <!--<item name="android:shadowRadius">0.6</item>-->
+        <!--<item name="android:background">@drawable/custom_btn_orange</item>-->
+        <!--<item name="android:padding">10dip</item>-->
+    <!--</style>-->
 
-    <style name="PoupStyle">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowCloseOnTouchOutside">true</item>
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryColorDark</item>
-        <item name="colorAccent">@color/accentColor</item>
-        <item name="android:background">@color/primaryColor</item>
-        <item name="android:textColor">@color/white</item>
+    <!--<style name="PoupStyle">-->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowCloseOnTouchOutside">true</item>-->
+        <!--<item name="colorPrimary">@color/primaryColor</item>-->
+        <!--<item name="colorPrimaryDark">@color/primaryColorDark</item>-->
+        <!--<item name="colorAccent">@color/accentColor</item>-->
+        <!--<item name="android:background">@color/primaryColor</item>-->
+        <!--<item name="android:textColor">@color/white</item>-->
 
-    </style>
-    <style name="DTP">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">@dimen/margin</item>
-    </style>
+    <!--</style>-->
+    <!--<style name="DTP">-->
+        <!--<item name="android:layout_width">fill_parent</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <!--<item name="android:layout_margin">@dimen/margin</item>-->
+    <!--</style>-->
 
-    <style name="DTP.Label">
-        <item name="android:textSize">@dimen/text</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:gravity">center</item>
-    </style>
+    <!--<style name="DTP.Label">-->
+        <!--<item name="android:textSize">@dimen/text</item>-->
+        <!--<item name="android:textStyle">bold</item>-->
+        <!--<item name="android:gravity">center</item>-->
+    <!--</style>-->
 
-    <style name="DTP.Button">
-        <item name="android:onClick">onClick</item>
-    </style>
+    <!--<style name="DTP.Button">-->
+        <!--<item name="android:onClick">onClick</item>-->
+    <!--</style>-->
 
     <style name="AppTheme.Base.NavigationDrawer" parent="AppTheme.Base">
         <item name="colorPrimary">@color/primaryColor</item>

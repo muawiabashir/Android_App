@@ -115,4 +115,7 @@
     <string name="Schedules_tab_name_Reminder">Schedules</string>
     <string name="History_tab_name_Reminder">History</string>
 
+    <!--kindly translate it-->
+    <string name="select_interval_in_hours">Select Interval in hours</string>
+
 </resources>

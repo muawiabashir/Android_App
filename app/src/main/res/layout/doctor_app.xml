@@ -16,7 +16,6 @@
 
     <Spinner
         android:id="@+id/spinner"
-        style="@style/spinner_style"
         android:layout_width="206dp"
         android:layout_height="46dp"
         android:layout_marginBottom="10dp"
@@ -48,7 +47,6 @@ android:layout_weight="1"
         android:gravity="right">
 
         <Spinner
-            style="@style/spinner_style"
             android:id="@+id/spinner2"
             android:layout_width="206dp"
             android:layout_height="46dp"

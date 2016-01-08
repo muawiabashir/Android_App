@@ -1,6 +1,7 @@
 package medilive.sudaapps.net.medilive.activity;
 
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
@@ -84,6 +85,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
                 return false;
             }
         });
+        searchView.setDropDownBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.primaryColor)));
     }
 
     private void makeDirectionsApiCall(){

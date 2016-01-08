@@ -36,7 +36,7 @@
 
             android:ems="13"
             android:hint="ابحث عن دواء"
-        style="@style/map_style"
+
         >
 
         <requestFocus />

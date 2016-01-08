@@ -103,7 +103,7 @@ public class AddMedicineSchedules extends AppCompatBaseActivity implements Selec
         intervalView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SelectIntervalDialog dialog=new SelectIntervalDialog(AddMedicineSchedules.this,AddMedicineSchedules.this,1,24);
+                SelectIntervalDialog dialog=new SelectIntervalDialog(AddMedicineSchedules.this,AddMedicineSchedules.this,0,24);
                 dialog.show();
             }
         });
