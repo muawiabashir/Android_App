@@ -112,4 +112,7 @@
     <string name="log_out_drawer">Logout</string>
     <string name="you_r_here">You are here.</string>
 
+    <string name="Schedules_tab_name_Reminder">Schedules</string>
+    <string name="History_tab_name_Reminder">History</string>
+
 </resources>

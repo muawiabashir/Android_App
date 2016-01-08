@@ -89,6 +89,7 @@
     <string name="options">خيارات</string>
     <string name="extras">المزيد</string>
     <string name="medi_information">معلومات طبية</string>
+    <string name="medi_services">خدمات طبية</string>
     <string name="transition_name_alarm">transition:ALARM</string>
     <string name="conf_exh">مؤتمرات طبية</string>
     <string name="tips_tricks">نصائح وحلول</string>
@@ -104,9 +105,10 @@
     <string name="med_dose">الجرعات</string>
     <string name="med_qty">الكمية</string>
     <string name="med_comment">اضافة تعليق</string>
+
     <string name="select_from_futur">Kindly Select Date from future.</string>
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
-    <string name="toolbar_med_sch">My Medicine Schedules</string>
+    <string name="toolbar_med_sch">جدول التنبيهات </string>
     <string name="take_your_medicine">الرجاء تناول الدواء</string>
     <string name="limits_signs">Limits and Signs</string>
     <string name="HEMATOLOGIC">HEMATOLOGIC</string>
@@ -121,6 +123,9 @@
     <string name="type_medicin_Name">Type Medicine Name</string>
     <string name="log_out_drawer">تسجيل الخروج</string>
     <string name="you_r_here">انت هنا.</string>
+    <string name="Schedules_tab_name">Schedules</string>
+    <string name="Schedules_tab_name_Reminder">جدولة</string>
+    <string name="History_tab_name_Reminder">السجل</string>
     <string-array name="Doc_spec">
         <item>اخصائي نساء وتوليد</item>
         <item>اخصائي باطنية</item>
