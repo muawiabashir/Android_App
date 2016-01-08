@@ -5,8 +5,8 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 
-import medilive.sudaapps.net.medilive.fragment.FragmentMedicineSchedule;
 import medilive.sudaapps.net.medilive.fragment.FragmentMedicineHistory;
+import medilive.sudaapps.net.medilive.fragment.FragmentMedicineSchedule;
 
 /**
  * Created by Phaedra on 6/11/2015.

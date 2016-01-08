@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import medilive.sudaapps.net.medilive.R;
 import medilive.sudaapps.net.medilive.activity.Directory;
+import medilive.sudaapps.net.medilive.activity.LimitsSigns;
 
 /**
  * Created by Adil on 28/12/2015.
@@ -76,6 +77,7 @@ public class FragmentMedicalInformation extends BasicV4Fragment implements View.
                 v.startAnimation(AnimationUtils.loadAnimation(getActivity(), R.anim.view_click));
                 //open here limites and signs screen
 //                startActivity(new Intent(getActivity(), MedicineSchedulesList.class));
+                startActivity(new Intent(getActivity(), LimitsSigns.class));
                 break;
             }
             case R.id.box3: {

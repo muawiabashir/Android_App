@@ -174,7 +174,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
         // Creating a LatLng object for the current location
         LatLng latLng = new LatLng(latitude, longitude);
         myPosition = new LatLng(latitude, longitude);
-        googleMap.addMarker(new MarkerOptions().title("You are here.").position(myPosition)).showInfoWindow();
+        googleMap.addMarker(new MarkerOptions().title(getString(R.string.you_r_here)).position(myPosition)).showInfoWindow();
         setMyLocationCamera(location,googleMap);
     }
     private void setMyLocationCamera(Location location,GoogleMap googleMap){

@@ -15,6 +15,14 @@
     <string name="Email">Please Enter the Password</string>
     <string name="serach">Search Medical Place</string>
     <string name="spinner_default">Please Select</string>
+    <string name="medical_directory">الدليل الطبي</string>
+    <string name="limits_signs">حدود وعلامات</string>
+    <string name="drug_information">معلومات الدواء</string>
+    <string name="conditions">وضع حالة</string>
+    <string name="medi_assist">مذكر مواعيد الادوية</string>
+    <string name="drug_availability">Drug Availability</string>
+    <string name="drug_delivery">Drug Delivery</string>
+    <string name="doctor_appointment">حجز دكتور</string>
 
     <string-array name="image_ids">
 
@@ -84,8 +92,12 @@
     <string name="time_out">Time Out</string>
     <string name="error_occured">Error Occurred</string>
     <string name="job">Occupation</string>
-
-
+    <string name="exit">اغلاق</string>
+    <string name="report">تقارير</string>
+    <string name="options">خيارات</string>
+    <string name="extras">المزيد</string>
+    <string name="medi_information">معلومات طبية</string>
+    <string name="medi_services">خدمات طبية</string>
     <string name="transition_name_alarm">transition:ALARM</string>
     <string name="conf_exh">مؤتمرات طبية</string>
     <string name="tips_tricks">نصائح وحلول</string>
@@ -101,11 +113,12 @@
     <string name="med_dose">الجرعات</string>
     <string name="med_qty">الكمية</string>
     <string name="med_comment">اضافة تعليق</string>
+
     <string name="select_from_futur">Kindly Select Date from future.</string>
     <string name="set_start_end_first">Kindly set the Start and End date first.</string>
-    <string name="toolbar_med_sch">My Medicine Schedules</string>
+    <string name="toolbar_med_sch">جدول التنبيهات </string>
     <string name="take_your_medicine">الرجاء تناول الدواء</string>
-    <string name="limits_signs">Limits and Signs</string>
+
     <string name="HEMATOLOGIC">HEMATOLOGIC</string>
     <string name="MEN">MEN</string>
     <string name="WOMEN">WOMEN</string>
@@ -115,25 +128,11 @@
     <string name="patient_name">patient_name</string>
     <string name="Look_medicein">look_medicien</string>
     <string name="Search_Medicin">string/Look_medicein</string>
-    <string name="type_medicin_Name">Type Medicine Name</string>
-    <string name="log_out_drawer">Logout</string>
-    <string-array name="Doc_spec">
-        <item>اخصائي نساء وتوليد</item>
-        <item>اخصائي باطنية</item>
-        <item>اخصائي جراحة</item>
-        <item>اخصائي اطفال</item>
-        <item>اخصائي عظام</item>
-        <item>اخصائي صدرية</item>
-        <item>اخصائي قلب</item>
-        <item>اخصائي الكلاء والمسالك البولية</item>
+    <string name="type_medicin_Name">ابحث عن دواء</string>
+    <string name="log_out_drawer">تسجيل الخروج</string>
+    <string name="you_r_here">انت هنا.</string>
+    <string name="Schedules_tab_name">Schedules</string>
+    <string name="Schedules_tab_name_Reminder">جدولة</string>
+    <string name="History_tab_name_Reminder">السجل</string>
 
-    </string-array>
-    <string-array name="doctor_names">
-        <item>د.عمر احمد عبدالرحيم</item>
-
-        <item> د.خالد عثمان</item>
-        <item>دد. عشميق</item>
-        <item>د. هيثم </item>
-
-    </string-array>
 </resources>

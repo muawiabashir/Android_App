@@ -175,8 +175,7 @@ public class RegisterActivity extends AppCompatBaseActivity {
                         String dob = user.getString("dob");
                         String phone_no = user.getString("phone_no");
                         String location = user.getString("location");
-                        String created_at = user
-                                .getString("created_at");
+                        String created_at = user.getString("created_at");
 
                         // Inserting row in users table
                         db.addUser(name, email, gender, dob, phone_no, location, uid, created_at);

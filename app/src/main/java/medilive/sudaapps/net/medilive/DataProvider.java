@@ -11,14 +11,14 @@ public class DataProvider {
 
     public static HashMap<String, List<String>> getInfo()
     {
-        HashMap<String, List<String>> MoviesDetails = new HashMap<String, List<String>>();
+        HashMap<String, List<String>> LimitsAndSignsDetails = new HashMap<String, List<String>>();
 
-        List<String> Action_Movies = new ArrayList<String>();
-        Action_Movies.add("300 Rise of an Empire");
-        Action_Movies.add("Robocop");
-        Action_Movies.add("The Hunger Games");
-        Action_Movies.add("The Expendables 3");
-        Action_Movies.add("Guardian of the Galaxy");
+        List<String> HEMATOLOGIC = new ArrayList<String>();
+        HEMATOLOGIC.add("300 Rise of an Empire");
+        HEMATOLOGIC.add("Robocop");
+        HEMATOLOGIC.add("The Hunger Games");
+        HEMATOLOGIC.add("The Expendables 3");
+        HEMATOLOGIC.add("Guardian of the Galaxy");
 
         List<String> Romntic_Movies = new ArrayList<String>();
         Romntic_Movies.add("Mean Girls");
@@ -41,12 +41,12 @@ public class DataProvider {
         Comedy_Movies.add("About last Night");
         Comedy_Movies.add("This is the End");
 
-        MoviesDetails.put("Drug Information", Action_Movies);
-        MoviesDetails.put("Health Conditions", Romntic_Movies);
-        MoviesDetails.put("Limits & vital signs", Horror_Movies);
-        MoviesDetails.put("Extra's", Comedy_Movies);
+        LimitsAndSignsDetails.put("HEMATOLOGIC", HEMATOLOGIC);
+        LimitsAndSignsDetails.put("Health Conditions", Romntic_Movies);
+        LimitsAndSignsDetails.put("Limits & vital signs", Horror_Movies);
+        LimitsAndSignsDetails.put("Extra's", Comedy_Movies);
 
-        return MoviesDetails;
+        return LimitsAndSignsDetails;
 
     }
 
