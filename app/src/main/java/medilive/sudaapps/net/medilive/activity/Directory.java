@@ -137,7 +137,7 @@ public class Directory extends AppCompatBaseActivity implements ApiResponseCallb
     }
     @Override
     public void onErrorResponse(VolleyError error, String url) {
-        Toast.makeText(Directory.this, "something went wrong.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(Directory.this, R.string.volley_error_response_message_toast, Toast.LENGTH_SHORT).show();
     }
 
     @Override

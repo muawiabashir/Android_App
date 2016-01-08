@@ -139,5 +139,8 @@
     <string name="interval_picker_dialog_ok">موافق</string>
     <string name="registration_gender_dialog_male">ذكر</string>
     <string name="registration_gender_dialog_female">انثي</string>
+    <string name="gender_picker_dialog_ok">موافق</string>
+    <string name="gender_picker_dialog_cancel">الغاء</string>
+    <string name="volley_error_response_message_toast">يوجد خطا في الاتصال</string>
 
 </resources>

@@ -119,6 +119,9 @@
     <string name="interval_picker_dialog_ok">Ok</string>
     <string name="registration_gender_dialog_male">Male</string>
     <string name="registration_gender_dialog_female">Female</string>
+    <string name="gender_picker_dialog_ok">Ok</string>
+    <string name="gender_picker_dialog_cancel">Cancel</string>
+    <string name="volley_error_response_message_toast">something went wrong.</string>
 
 
 </resources>
