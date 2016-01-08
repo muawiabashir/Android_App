@@ -117,6 +117,8 @@
     <string name="select_interval_in_hours">Select Interval in hours</string>
     <string name="interval_picker_dialog_cancel">Cancel</string>
     <string name="interval_picker_dialog_ok">Ok</string>
+    <string name="registration_gender_dialog_male">Male</string>
+    <string name="registration_gender_dialog_female">Female</string>
 
 
 </resources>

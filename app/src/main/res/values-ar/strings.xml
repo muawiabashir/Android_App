@@ -66,16 +66,16 @@
     </string-array>
 
     <string name="search_ho">ابحث عن دواء</string>
-    <string name="hint_email">Email</string>
-    <string name="hint_password">Password</string>
-    <string name="hint_name">Fullname</string>
-    <string name="hint_Gender">Select Gender</string>
-    <string name="hint_DOB">Date Of Birth</string>
-    <string name="hint_Phone_No">Phone No</string>
-    <string name="hint_Location">Location</string>
-    <string name="btn_login">LOGIN</string>
-    <string name="btn_register">REGISTER</string>
-    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="hint_email">البريد الالكتروني</string>
+    <string name="hint_password">كلمة المرور</string>
+    <string name="hint_name">الاسم</string>
+    <string name="hint_Gender">اختار النوع</string>
+    <string name="hint_DOB">تاريخ الميلاد</string>
+    <string name="hint_Phone_No">رقم الهاتف</string>
+    <string name="hint_Location">العنوان</string>
+    <string name="btn_login">تسجيل الدخول</string>
+    <string name="btn_register">تسجيل</string>
+    <string name="btn_link_to_register">لست عضو/اريد التسجيل.</string>
     <string name="btn_link_to_login">Already registred! Login Me.</string>
     <string name="welcome">Welcome</string>
     <string name="btn_logout">LOGOUT</string>
@@ -137,5 +137,7 @@
     <string name="select_interval_in_hours">الرجاء اختار عدد المرات</string>
     <string name="interval_picker_dialog_cancel">الغاء</string>
     <string name="interval_picker_dialog_ok">موافق</string>
+    <string name="registration_gender_dialog_male">ذكر</string>
+    <string name="registration_gender_dialog_female">انثي</string>
 
 </resources>

@@ -54,8 +54,8 @@ public class SelectGenderAdapter extends RecyclerView.Adapter<SelectGenderAdapte
 
     private void initList() {
 
-        dataList.add(new GenderModel("Male", false));
-        dataList.add(new GenderModel("Female", false));
+        dataList.add(new GenderModel(mContext.getString(R.string.registration_gender_dialog_male), false));
+        dataList.add(new GenderModel(mContext.getString(R.string.registration_gender_dialog_female), false));
 
     }
 
