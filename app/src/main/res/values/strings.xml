@@ -114,5 +114,8 @@
 
     <string name="Schedules_tab_name_Reminder">Schedules</string>
     <string name="History_tab_name_Reminder">History</string>
+    <string name="select_interval_in_hours">Select Interval in hours</string>
+    <string name="interval_picker_dialog_cancel">Cancel</string>
+    <string name="interval_picker_dialog_ok">Ok</string>
 
 </resources>
