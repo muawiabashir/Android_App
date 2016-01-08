@@ -156,6 +156,7 @@ public class LoginActivity extends AppCompatBaseActivity {
                         // user successfully logged in
                         // Create login session
                         session.setLogin(true);
+                        session.setUserName((jObj.getJSONObject("user")).getString("name"));
 
                         // Launch main activity
 //                        Intent intent = new Intent(LoginActivity.this,

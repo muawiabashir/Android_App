@@ -22,6 +22,7 @@ public class SessionManager {
 	private static final String PREF_NAME = "MedilifeLogin";
 	
 	private static final String KEY_IS_LOGGEDIN = "isLoggedIn";
+	private static final String KEY_USER_NAME = "userName";
 
 	public SessionManager(Context context) {
 		this._context = context;
@@ -38,7 +39,13 @@ public class SessionManager {
 
 		Log.d(TAG, "User login session modified!");
 	}
-	
+	public void setUserName(String userName){
+		editor.putString(KEY_USER_NAME, userName);
+		editor.commit();
+	}
+	public String getUserName(){
+		return pref.getString(KEY_USER_NAME,"");
+	}
 	public boolean isLoggedIn(){
 		return pref.getBoolean(KEY_IS_LOGGEDIN, false);
 	}

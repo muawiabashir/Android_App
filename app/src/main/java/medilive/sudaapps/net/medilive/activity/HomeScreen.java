@@ -152,7 +152,7 @@ public class HomeScreen extends AppCompatBaseActivity {
         try {
             if(session.isLoggedIn()) {
                 loginLogoutView.setText(getResources().getString(R.string.log_out_drawer));
-                userNameView.setText(db.getUserDetails().get("name"));
+                userNameView.setText(session.getUserName());
             }else{
                 userNameView.setText("");
             }
@@ -171,6 +171,7 @@ public class HomeScreen extends AppCompatBaseActivity {
                 if (session.isLoggedIn()) {
                     session.setLogin(false);
                     loginLogoutView.setText(getResources().getString(R.string.btn_login));
+                    userNameView.setText("");
                     drawerLayout.closeDrawers();
                 }else {
                     drawerLayout.closeDrawers();

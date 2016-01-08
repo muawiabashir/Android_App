@@ -55,7 +55,6 @@ public class RegisterActivity extends AppCompatBaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
     }
 
     @Override
