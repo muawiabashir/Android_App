@@ -70,8 +70,8 @@ public class LoginActivity extends AppCompatBaseActivity {
         // Check if user is already logged in or not
         if (session.isLoggedIn()) {
             // User is already logged in. Take him to main activity
-//            Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
-//            startActivity(intent);
+            Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
+            startActivity(intent);
             finish();
         }
     }
@@ -101,8 +101,8 @@ public class LoginActivity extends AppCompatBaseActivity {
                     if(TextUtils.isEmpty(email))
                     {
                         inputEmail.setError(inputEmail.getHint()+" is Required");
-                        //inputPassword.setError(inputPassword.getHint()+" is Required");
-                        //    btnLogin.setError(btnLogin.getHint()+"is Required");
+                        inputPassword.setError(inputPassword.getHint()+" is Required");
+                            btnLogin.setError(btnLogin.getHint()+"is Required");
                         return ;
 
                     }
@@ -159,9 +159,9 @@ public class LoginActivity extends AppCompatBaseActivity {
                         session.setUserName((jObj.getJSONObject("user")).getString("name"));
 
                         // Launch main activity
-//                        Intent intent = new Intent(LoginActivity.this,
-//                                MainActivity.class);
-//                        startActivity(intent);
+                       Intent intent = new Intent(LoginActivity.this,
+                                HomeScreen.class);
+                        startActivity(intent);
                         finish();
                     } else {
                         // Error in login. Get the error message
