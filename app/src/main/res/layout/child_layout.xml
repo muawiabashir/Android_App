@@ -51,7 +51,7 @@ android:background="@drawable/roundexpandablchilds"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/img2"
                     android:text="@string/MEN"
-                    android:textDirection="anyRtl"
+
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
             </RelativeLayout>
 
@@ -82,7 +82,7 @@ android:background="@drawable/roundexpandablchilds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/img1"
-                    android:textDirection="anyRtl"
+
                     android:text="WOMEN"
                     android:textAppearance="?android:attr/textAppearanceMedium"/>
             </RelativeLayout>

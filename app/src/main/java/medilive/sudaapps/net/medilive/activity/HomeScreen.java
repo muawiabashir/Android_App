@@ -171,6 +171,7 @@ public class HomeScreen extends AppCompatBaseActivity {
                 if (session.isLoggedIn()) {
                     session.setLogin(false);
                     loginLogoutView.setText(getResources().getString(R.string.btn_login));
+                    startActivity(new Intent(HomeScreen.this, LoginActivity.class));
                     userNameView.setText("");
                     drawerLayout.closeDrawers();
                 }else {
